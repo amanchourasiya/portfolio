@@ -1,0 +1,59 @@
+{% load static%}    
+<head>
+  
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://getbootstrap.com.vn/examples/equal-height-columns/equal-height-columns.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    </head>
+	
+<body>	
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Aman</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right ">
+        <li><a href="#"><i class="fa fa-fw fa-home"></i>Home</a></li>
+        <li>
+          <a href="blog.html"><i class="fab fa-blogger-b"></i>log</a> 
+        
+        </li>
+        <li><a href={%url 'port'%}><i class="glyphicon glyphicon-user"></i>Portfolio</a></li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+       
+        <li><a href="post.html""><span class="glyphicon glyphicon-log-in"></span> Post</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+
+	
+{% block page_content %}
+{% endblock %}
+
+<script>
+  $(function(){
+    $(window).on("load resize",function(){
+	  $(".fill-screen").css("height",window.innerHeight);
+	  });
+	  });
+	  </script>
+
+</body>

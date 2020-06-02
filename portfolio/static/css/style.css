@@ -1,0 +1,78 @@
+body{
+	padding-top: 50px;
+}
+.fill-screen{
+	
+	background-size: cover;
+	background-position: center;
+	
+}
+.content-filler{
+	min-height: 350px;
+	
+}
+.fixed-attachment{
+background-attachment: fixed;
+}
+
+.hero
+{
+
+font-family: 'Girassol', cursive;
+letter-spacing: 0.2px;
+position: absolute;
+padding-left: 20px;
+color: white;
+top: 100px;
+}
+.hero1
+{
+	text-decoration-line: underline;
+font-family: Snell Roundhand,cursive;
+ text-shadow: 1px 0 #888888;
+ letter-spacing 1px;
+ font:weight: 900;
+ color: #050517;
+ margin-top: 50px;
+ margin-left:50px;
+
+}
+
+.para-desc{
+	      margin-left:50px;
+          padding:1em 0.5em;
+          font-size: 1rem;
+          line-height: 1.4;
+          font-family: 'Poppins', sans-serif;
+          color: #050517;
+		  font-size: 20px;
+        }
+
+.col-md-6
+{
+	height: 475px;
+background-color: #15155c;
+color:white;
+
+padding-top:1px;
+
+}
+
+.port-desc h1{
+    text-decoration-line: underline;
+	font-family: 'Girassol', cursive;
+}
+.port-desc p{
+	
+	font-family: 'Girassol', cursive;
+	margin-top: 50px;
+	margin-left:20px;
+	margin-right: 20px;
+	line-height: 1.9;
+}
+
+.hello{
+	
+	margin-left: 0px;
+	margin-right: 0px;
+}
