@@ -1,10 +1,11 @@
-body{
-	padding-top: 50px;
+.container-fluid{
+overflow:hidden;
 }
 .fill-screen{
 	
 	background-size: cover;
 	background-position: center;
+	
 	
 }
 .content-filler{
@@ -73,6 +74,6 @@ padding-top:1px;
 
 .hello{
 	
-	margin-left: 0px;
-	margin-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
 }
