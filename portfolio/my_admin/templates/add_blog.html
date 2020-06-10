@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static%} 
+
+{% block navbar %}
+
+	 <li class="nav-item" >
+        <a   class="nav-link" href="#"><i class="fa fa-plus-circle"></i>Blog</a>
+      </li> 
+	   <li class="nav-item" >
+        <a   class="nav-link" href="#"><i class="fa fa-plus-circle"></i>Projects</a>
+      </li> 
+	  <li class="nav-item" >
+        <a   class="nav-link" href="{% url 'logout' %}"><i class="fa fa-sign-out-alt"></i>Logout</a>
+      </li> 
+{% endblock %}
+
+
+{% block page_content%}
+<div style="background: rgb(233,233,233);">
+<div style="min-height:100px;"></div>
+<div  id="editorjs" style="background:white;margin-left:50px; margin-right:50px;margin-bottom:50px;"></div>
+<div class="text-right">
+<button class="btn btn-primary mb-3 mr-5 ">Save BLOG</button>
+</div>
+</div>
+<script src="{% static '/editor.js'%}">
+</script>
+
+{%endblock%}
+

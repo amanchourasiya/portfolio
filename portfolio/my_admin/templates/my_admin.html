@@ -58,6 +58,7 @@
 
 
 <form action="check" method="post" id="login-form"><input type="hidden" name="csrfmiddlewaretoken" value="KZ0c7dDM9jiAtQTDfVVICOdcKjECOOjzoJw14k6NjsiJAtNd7CUzVdx5gvKa54SC">
+  {% csrf_token %}
   <div class="form-row">
     
     <label class="required" for="id_username">Username:</label> <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" required id="id_username">
