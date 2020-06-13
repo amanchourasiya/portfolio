@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.conf.urls import url
 from my_admin import views
 
 
@@ -24,4 +25,5 @@ urlpatterns = [
     path('port/', include('port.urls')),
     path('my_admin/', include('my_admin.urls')),
     path('api/v1/image', include('apiserver.urls')),
+    url(r'^my_admin/add_blog/api/v1/image',include('apiserver.urls')),
 ]
