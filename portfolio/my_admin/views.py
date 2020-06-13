@@ -1,8 +1,11 @@
 from django.shortcuts import render,redirect
 from my_admin.models import Login
-import json
 from django.views.decorators.csrf import csrf_exempt
+import json
 from django.http import JsonResponse
+import re
+from my_admin.html_generator import create_html
+
 
 def login(request):
     return render(request, 'my_admin.html', {})
@@ -39,19 +42,17 @@ def logout(request):
     return redirect('/my_admin')
 
 @csrf_exempt
-def image(request):
+def blog(request):
     if request.method=="POST":
         
-        img_data=request.FILES['image'].read()
-
-        fileobj=open("static/blog-images/blog-image1.jpg","wb")
-        fileobj.write(img_data)
+        editor_data=json.loads(request.body)
+        title=editor_data['blocks'][0]['data']['text']
+        title=re.sub(r"\s+",'_',title)
+        print("title:",title)
+        fileobj=open("my_admin/templates/blog/"+title+".html","w")
         fileobj.close()
-       
-        data={"success" : 1,"file": {"url" : "http://127.0.0.1:8000/static/blog-images/blog-image1.jpg",}}
+        create_html(title,editor_data['blocks'])
+        print("Html created successfully")
         
-
-        return JsonResponse(data,safe=False)
-
-
-    
+        return render(request,'my_admin.html')
+   

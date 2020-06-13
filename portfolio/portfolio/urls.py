@@ -23,5 +23,5 @@ urlpatterns = [
     path('', include('blog.urls')),
     path('port/', include('port.urls')),
     path('my_admin/', include('my_admin.urls')),
-    path('api/v1/image', views.image),
+    path('api/v1/image', include('apiserver.urls')),
 ]
