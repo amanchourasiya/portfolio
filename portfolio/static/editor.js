@@ -13407,14 +13407,25 @@ const editor= new EditorJS(
 }
 )
 
+
 function onSaveBlog(){
 	editor.save().then((outputData) => {
   json_string=JSON.stringify(outputData);
   const xhr= new XMLHttpRequest();
   xhr.open('POST','blog_req/');
   xhr.setRequestHeader('Content-Type','application/json');
+  xhr.onload= () =>{
+   url=JSON.parse(xhr.responseText);
+  location.replace("http://amanchourasiya.com/blog/"+url+"")
+  
+  }
   xhr.send(json_string);
-  alert("BLOG added successfully");
+  
+  
+  
+  
+  
+
  
   
 }).catch((error) => {

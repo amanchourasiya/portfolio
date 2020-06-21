@@ -2,5 +2,12 @@ from django.urls import path
 from blog import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
+
+     path('<slug:title>/', views.add_blog),
+     path('', views.blog,name="blog"),
+   
+   
+    
+    
 ]
+ 

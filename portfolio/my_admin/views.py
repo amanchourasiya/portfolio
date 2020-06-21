@@ -5,7 +5,7 @@ import json
 from django.http import JsonResponse
 import re
 from my_admin.html_generator import create_html
-
+from my_admin.save_cards import save_cards
 
 def login(request):
     return render(request, 'my_admin.html', {})
@@ -42,17 +42,21 @@ def logout(request):
     return redirect('/my_admin')
 
 @csrf_exempt
-def blog(request):
+def save_blog(request):
     if request.method=="POST":
         
         editor_data=json.loads(request.body)
         title=editor_data['blocks'][0]['data']['text']
         title=re.sub(r"\s+",'_',title)
-        print("title:",title)
-        fileobj=open("my_admin/templates/blog/"+title+".html","w")
+        
+        fileobj=open("blog/templates/blog/"+title+".html","w")
         fileobj.close()
+        blog_card_data={title:editor_data}
+       
+        print(editor_data)
+        save_cards(title,editor_data['blocks'])
         create_html(title,editor_data['blocks'])
         print("Html created successfully")
-        
-        return render(request,'my_admin.html')
+        link=title
+        return JsonResponse(link,safe=False)
    

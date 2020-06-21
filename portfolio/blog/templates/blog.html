@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static%} 
+{% block page_content %}
+   <div style=" min-height: 70px;"></div>
+   <h1 class="text-center mb-5">Recent BLOGS</h1>
+   <div class="container">
+   <div class="card-deck">
+   {% for key,value in data.items %}
+   
+     <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src={{value.1.data.file.url}} style="width:100%;height:30%;" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{key}}</h5>
+    <p class="card-text">{{value.2.data.text|truncatechars:20}}</p>
+    <a href=http://amanchourasiya.com/blog/{{key}} class="btn btn-primary">Read more</a>
+  </div>
+</div>
+      
+   {% endfor %}
+   </div>
+   </div>
+{% endblock %}
+
+
+
