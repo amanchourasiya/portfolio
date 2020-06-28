@@ -14,7 +14,7 @@ def image(request):
         fileobj.write(img_data)
         fileobj.close()
        
-        data={"success" : 1,"file": {"url" : "http://amanchourasiya.com/static/blog-images/"+str(ID)+".jpg",}}
+        data={"success" : 1,"file": {"url" : "/static/blog-images/"+str(ID)+".jpg",}}
         
 
         return JsonResponse(data,safe=False)

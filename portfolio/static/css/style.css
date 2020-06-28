@@ -123,3 +123,41 @@ padding-top:1px;
 			font-style: normal;
 			    font-weight: 400;
 }
+.blog-body{
+	background-color:#e9ecef;
+	
+}
+.single-blog{
+	
+	box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.2);
+	padding: 10px;
+	margin-top: 30px;
+	background-color: #fff;
+}
+.blog-text{
+font-size: 14px;
+text-align:justify;
+text-align:justify;
+}
+.single-blog h5{
+	margin-top: 10px;
+	font-size: 16px;
+	color: #007bff;
+}
+.single-blog h5 a{
+	text-decoration: none;
+}
+.read-more-btn{
+background-image: linear-gradient(to right, #1c03b5,#5c8bef);
+padding; 5px 12px 8px;
+border-radius: 20px;
+line-height:20px;
+font-size: 14px;
+color: #fff;
+border: none!important:
+}
+.read-more-btn:hover{
+background-image: linear-gradient(to right, #006417,#00b128);
+text-decoration: none;
+color: #fff;
+}

@@ -1,4 +1,37 @@
 {
+    "Life_without_CSRF_Token": [
+        {
+            "type": "header",
+            "data": {
+                "text": "Life without CSRF Token",
+                "level": 3
+            }
+        },
+        {
+            "type": "image",
+            "data": {
+                "file": {
+                    "url": "/static/blog-images/74.jpg"
+                },
+                "caption": "cd",
+                "withBorder": false,
+                "stretched": false,
+                "withBackground": false
+            }
+        },
+        {
+            "type": "paragraph",
+            "data": {
+                "text": "The design is finished. Next we will work on the hover effect to zoom out the card.The design is finished. Next we will work on the hover effect to zoom out the card.The design is finished. Next we will work on the hover effect to zoom out the card."
+            }
+        },
+        {
+            "type": "paragraph",
+            "data": {
+                "text": "The design is finished. Next we will work on the hover effect to zoom out the card.The design is finished. Next we will work on the hover effect to zoom out the card.The design is finished. Next we will work on the hover effect to zoom out the card."
+            }
+        }
+    ],
     "Scope_with_Artificial_Intelligence": [
         {
             "type": "header",
@@ -11,7 +44,7 @@
             "type": "image",
             "data": {
                 "file": {
-                    "url": "http://amanchourasiya.com/static/blog-images/73.jpg"
+                    "url": "/static/blog-images/73.jpg"
                 },
                 "caption": "AI",
                 "withBorder": false,
@@ -26,7 +59,7 @@
             }
         }
     ],
-    "How_to_access_other_gmail_account_without_knowing_password": [
+    "How_to_access_other_gmail_password": [
         {
             "type": "header",
             "data": {
@@ -38,7 +71,7 @@
             "type": "image",
             "data": {
                 "file": {
-                    "url": "http://amanchourasiya.com/static/blog-images/72.jpg"
+                    "url": "/static/blog-images/72.jpg"
                 },
                 "caption": "Hacker C$de!!!",
                 "withBorder": false,
@@ -90,7 +123,7 @@
             "type": "image",
             "data": {
                 "file": {
-                    "url": "http://amanchourasiya.com/static/blog-images/70.jpg"
+                    "url": "/static/blog-images/70.jpg"
                 },
                 "caption": "",
                 "withBorder": false,
@@ -117,7 +150,7 @@
             "type": "image",
             "data": {
                 "file": {
-                    "url": "http://amanchourasiya.com/static/blog-images/69.jpg"
+                    "url": "/static/blog-images/69.jpg"
                 },
                 "caption": "cd2",
                 "withBorder": false,
@@ -150,7 +183,7 @@
             "type": "image",
             "data": {
                 "file": {
-                    "url": "http://amanchourasiya.com/static/blog-images/68.jpg"
+                    "url": "/static/blog-images/68.jpg"
                 },
                 "caption": "cd1",
                 "withBorder": false,
