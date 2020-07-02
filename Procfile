@@ -1,1 +1,1 @@
-web: gunicorn -b 0.0.0.0:8000 --chdir portfolio/ portfolio.wsgi --log-file -
+web: gunicorn -b 0.0.0.0:80 --chdir portfolio/ portfolio.wsgi --log-file -
