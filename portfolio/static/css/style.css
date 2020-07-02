@@ -1,16 +1,21 @@
-body{
-	padding-top: 50px;
+.container-fluid{
+overflow:hidden;
 }
 .fill-screen{
 	
 	background-size: cover;
 	background-position: center;
 	
+	
 }
 .content-filler{
 	min-height: 350px;
 	
 }
+.content-filler-top{
+	min-height: 200px;
+}
+
 .fixed-attachment{
 background-attachment: fixed;
 }
@@ -73,6 +78,86 @@ padding-top:1px;
 
 .hello{
 	
-	margin-left: 0px;
-	margin-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.para-desc-blog{
+	      line-height: 28px;
+             font-weight: 100;
+             letter-spacing: -0.003em;
+          color: #545b62
+		  font-size: 18px;
+		  font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+        }
+
+.blog{
+	margin-left:200px;
+	margin-right:200px;"	
+}
+@media (max-width: 417px){
+	
+.blog{
+		margin-left:20px;
+		margin-right:20px;
+	}
+}
+.blog-first-char{
+    margin-right: 12px;
+	line-height: .83;
+	font-size: 66px;
+	float: left;
+	position: relative;
+	letter-spacing: -0.003em;
+	color: rgba(41, 41, 41, 1);
+	font-style: normal;
+					
+    font-weight: 400;
+}
+.head-blog{
+	    margin-bottom:20px;
+	    line-height: 40px;
+		    font-size: 30px;
+			font-family: medium-content-title-font, Georgia, Cambria, "Times New Roman", Times, serif;
+			color: rgba(41, 41, 41, 1);
+			letter-spacing: 0;
+			font-style: normal;
+			    font-weight: 400;
+}
+.blog-body{
+	background-color:#e9ecef;
+	
+}
+.single-blog{
+	
+	box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.2);
+	padding: 10px;
+	margin-top: 30px;
+	background-color: #fff;
+}
+.blog-text{
+font-size: 14px;
+text-align:justify;
+text-align:justify;
+}
+.single-blog h5{
+	margin-top: 10px;
+	font-size: 16px;
+	color: #007bff;
+}
+.single-blog h5 a{
+	text-decoration: none;
+}
+.read-more-btn{
+background-image: linear-gradient(to right, #1c03b5,#5c8bef);
+padding; 5px 12px 8px;
+border-radius: 20px;
+line-height:20px;
+font-size: 14px;
+color: #fff;
+border: none!important:
+}
+.read-more-btn:hover{
+background-image: linear-gradient(to right, #006417,#00b128);
+text-decoration: none;
+color: #fff;
 }
