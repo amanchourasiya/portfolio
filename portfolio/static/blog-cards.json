@@ -1,4 +1,34 @@
 {
+    "My_New_Nav": [
+        {
+            "type": "header",
+            "data": {
+                "text": "My New Nav",
+                "level": 3
+            }
+        },
+        {
+            "type": "image",
+            "data": {
+                "file": {
+                    "url": "/static/blog-images/75.jpg"
+                },
+                "caption": "",
+                "withBorder": false,
+                "stretched": false,
+                "withBackground": false
+            }
+        }
+    ],
+    "Test_Logout": [
+        {
+            "type": "header",
+            "data": {
+                "text": "Test Logout",
+                "level": 3
+            }
+        }
+    ],
     "Life_without_CSRF_Token": [
         {
             "type": "header",

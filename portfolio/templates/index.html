@@ -1,48 +1,67 @@
 {% extends "base.html" %}
 {% load static%} 
 {% block page_content %}
-<div class="container-fluid p-0" >
 
-  <div class="row" style="padding-right:0px;padding-left:0px;" >
-  <div class="col">
-  <div class="fill-screen img-fluid" style="background-image:url(static/img/code2.jpg);position: relative">
-    <h1 class="hero ">Enough Talk<br>Show Me The C$de!</h1><br>
-	
-  </div>
-  </div>
-  </div>
-
-  <div class="row content-filler">
-  
-    <div class="hero1">
-       <h1>About Me:<br></h1>
-	   
-    </div> 
-	
-	<div class="para-desc">
-	
-	<p class="port-para">This is Aman Chourasiya .Web Developer ,Software Developer and a blogger. Welcome to my website and enjoy Our Development is Your Success</p>
-	
-	</div>
- </div>
-   <div class="container-fluid p-0" ">
-
-  <div class="row" style="padding-right:0px;padding-left:0px;" >
-  <div class="col">
-  <div class="fill-screen img-fluid fixed-attachment" style="background-image:url(static/img/code3.jpg);position: relative">
-    <h1 class="hero ">Enough Talk<br>Show Me The C$de!</h1><br>
-	
-  </div>
-  </div>
-  </div>
-  <div class="row content-filler">
-  
- 
- </div>
- 
+ <main>
+  <section  style="background:url('{% static 'img/code11.jpg' %}');background-size:cover;height:110vh;display: flex;justify-content:center;margin-top:0px;">
+   <div class="site-background">
+     <h3 class="site-title">Techie Aman</h3>
+     <h1> Enough Talk Show Me The Co$e</h1>
+	 <button class="site-btn">Explore</button>
    
- 
+   </div>
   
+</section>
+  
+  <section  style="backgroud-color:white;background-repeat:no-repeat;background-position:right;width:100%;">
+<h1 class="text-center  ">Popular BLOG's</h1>  
+  <div class="container-owl mb-5">
+     <div class="owl-carousel owl-theme blog-post">
+       <div class="blog-content">
+         <img  src="{% static 'img/code11.jpg' %}" style="width:100%;" height="150" alt="Card image cap">
+         <div class="blog-title">
+          <h3 style="    color: black;font-weight: 1000;">My First BLOG My second BLOG</h3>
+	      <p style="color: #000000;font-weight: 1000;">s is Aman Chourasiya .Web Developer ,Software Developer and a  </p>
+          <button class="blog-index-btn">Read More</button>	
+         </div>
+      </div>
+	  <div class="blog-content">
+         <img  src="{% static 'img/code2.jpg' %}" style="width:100%;" height="150" alt="Card image cap">
+         <div class="blog-title">
+          <h3>hello</h3>
+	      <p>bye</p>
+          <button class="blog-index-btn">Read More</button>	
+         </div>
+      </div>
+	  <div class="blog-content">
+         <img  src="{% static 'img/code4.jpg' %}" style="width:100%;" height="150" alt="Card image cap">
+         <div class="blog-title">
+          <h3>hello</h3>
+	      <p>bye</p>
+          <button class="blog-index-btn">Read More</button>	
+         </div>
+      </div>
+	  <div class="blog-content">
+         <img  src="{% static 'img/code6.jpg' %}" style="width:100%;" height="150" alt="Card image cap">
+         <div class="blog-title">
+          <h3>hello</h3>
+	      <p>bye</p>
+          <button class="blog-index-btn">Read More</button>	
+         </div>
+      </div>
+	  </div>
+	  
+	  
+    </div>
+	
+   
+   
+   
+  </section>
+  
+</main>
+
+
   
   
 {% endblock %}
