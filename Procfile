@@ -1,1 +1,1 @@
-web: python3 -m http.server 80
+web: gunicorn -b 0.0.0.0:$PORT --chdir portfolio/ portfolio.wsgi --log-file -
