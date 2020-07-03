@@ -4,8 +4,9 @@ from django.views.decorators.csrf import csrf_exempt
 import json
 from django.http import JsonResponse
 import re
+import os
 from my_admin.html_generator import create_html
-from my_admin.save_cards import save_cards
+from my_admin.save_cards import save_cards'
 
 def login(request):
     return render(request, 'my_admin.html', {})
@@ -13,15 +14,15 @@ def login(request):
 def check(request):
     print("before fun")
     if request.method=="POST":
-        username=request.POST.get('username')
+        username=request.POST.get('username')  # Both variable name should be different
         password=request.POST.get('password')
         
 
-        userName=Login.objects.values('userName')
-        passWord=Login.objects.values('passWord')
+        userName=os.environ['USERNAME']
+        passWord=os.environ['PASSWORD']
         
 
-        if ((username == userName[0]['userName']) and (password==passWord[0]['passWord'])):
+        if ((username == userName) and (password==passWord)):
             request.session['username']=username
             return redirect('./add_blog')
         else:
