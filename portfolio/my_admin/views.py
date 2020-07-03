@@ -21,9 +21,12 @@ def check(request):
         userName=os.environ['USERNAME']
         passWord=os.environ['PASSWORD']
         
-
+        #print('post ' + username + ' ' + password)
+        #print('env ' + userName + ' ' + passWord)
         if ((username == userName) and (password==passWord)):
+            #print('Saving session')
             request.session['username']=username
+            #print('Saved session')
             return redirect('./add_blog')
         else:
             username=None
