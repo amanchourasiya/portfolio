@@ -6,7 +6,7 @@ from django.http import JsonResponse
 import re
 import os
 from my_admin.html_generator import create_html
-from my_admin.save_cards import save_cards'
+from my_admin.save_cards import save_cards
 
 def login(request):
     return render(request, 'my_admin.html', {})
