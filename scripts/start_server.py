@@ -115,6 +115,8 @@ def set_counter():
         f.write(count)
 
 def generate_blogs():
+    if not os.path.exists('portfolio/static/blog-cards.json'):
+        return
     with open('portfolio/static/blog-cards.json', 'r') as f:
         blogs = json.load(f)
     path = 'portfolio/blog/templates/blog/'

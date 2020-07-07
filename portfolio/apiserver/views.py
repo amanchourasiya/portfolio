@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
-from idgenerator import getID
+from .idgenerator import getID
 
 @csrf_exempt
 def image(request):
