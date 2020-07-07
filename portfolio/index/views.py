@@ -7,7 +7,5 @@ def index(request):
         with open("static/blog-cards.json","r") as fileobj:
             data=json.load(fileobj)
         return render(request, 'index.html',{'data':data})
-
     else:
-        
-         return render(request, 'index.html',{'data':{}})
+        return render(request, 'index.html',{'data':{}})
