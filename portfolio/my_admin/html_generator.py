@@ -1,6 +1,6 @@
-def create_html(title,blocks):
+def create_html(title,blocks, path='blog/templates/blog/'):
     flag=0
-    fileobj=open("blog/templates/blog/"+title+".html","a")
+    fileobj=open(path + title + ".html","w+")
     navbar='''
 
          {% extends "base.html" %}

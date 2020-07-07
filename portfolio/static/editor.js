@@ -13396,7 +13396,7 @@ const editor= new EditorJS(
       config: {
         endpoints: {
           byFile: 'api/v1/image', // Your backend file uploader endpoint
-          byUrl: 'http://localhost:8008/fetchUrl', // Your endpoint that provides uploading by Url
+          byUrl: window.location.hostname + '/fetchUrl', // Your endpoint that provides uploading by Url
         }
       }
     }
@@ -13416,8 +13416,7 @@ function onSaveBlog(){
   xhr.setRequestHeader('Content-Type','application/json');
   xhr.onload= () =>{
    url=JSON.parse(xhr.responseText);
-  location.replace("http://amanchourasiya.com/blog/"+url+"")
-  
+  window.location.href = 'http://' + window.location.hostname + '/blog/'+url;
   }
   xhr.send(json_string);
   

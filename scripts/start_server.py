@@ -9,6 +9,12 @@ This will setup config based on development/production environment
 
 import sys
 import os
+import json
+import boto3
+
+sys.path.append(os.getcwd() +'/portfolio/my_admin')
+from html_generator import create_html
+
 
 def usage():
     print('Script usage')
@@ -19,13 +25,101 @@ def dev_mode():
     pass
 
 def prod_mode():
+    # Cleanup dev blogs used for testing
+    cleanup_dev_data()
+
     # Download images and blog JSON from persistent storage
+    get_persistent_data()
     try:
         port = os.environ['PORT']
     except:
         port = 80
     os.system('gunicorn -b 0.0.0.0:' + str(port) + ' --chdir portfolio/ portfolio.wsgi --log-file -')
 
+def cleanup_dev_data():
+    data_dir = 'portfolio/static'
+
+    # Removing blog images
+    cmd = f'rm -rf {data_dir}/blog-images/*'
+    os.system(cmd)
+
+    # Removing old blog-cards.json
+    cmd = f'rm -rf {data_dir}/blog-cards.json'
+    os.system(cmd)
+
+    # Cleanup images marker file 
+    os.system('rm -f portfolio/static/.count.txt')
+
+    # Cleanup blog html
+    cmd = 'rm -rf portfolio/blog/templates/blog/*'
+    os.system(cmd)
+
+def get_persistent_data():
+    try:
+        aws_access_key_id = os.environ['AWS_ACCESS_KEY_ID']
+        aws_secret_access_key = os.environ['AWS_SECRET_ACCESS_KEY']
+    except:
+        print('AWS credentials not supplied in env')
+        sys.exit(1)
+
+    aws_region = 'ap-south-1'
+    blog_json_file = 'portfolio/static/blog-cards.json'
+    bucket_name = 'amanchourasiya'
+
+    s3 = boto3.resource('s3',
+                        aws_access_key_id=aws_access_key_id,
+                        aws_secret_access_key=aws_secret_access_key,
+                        region_name=aws_region )
+
+    try:
+        s3.meta.client.download_file(Bucket=bucket_name,
+                                     Key='blogs/blog-cards.json',
+                                     Filename=blog_json_file )
+    except:
+        pass
+
+    # Download image counter
+    try:
+        s3.meta.client.download_file(Bucket=bucket_name,
+                                     Key='count.txt',
+                                     Filename='portfolio/static/.count.txt')
+        set_counter()
+    except:
+        reset_counter()
+
+    # Download all blog images
+    get_blog_images(s3, bucket_name)
+
+    # Generate blogs html
+    generate_blogs()
+
+def get_blog_images(s3_resource, bucket_name):
+    store_path = 'portfolio/static/blog-images/'
+    bucket = s3_resource.Bucket(bucket_name)
+    for s3_object in bucket.objects.filter(Prefix='blog-images/'):
+        _, filename = os.path.split(s3_object.key)
+        bucket.download_file(s3_object.key, store_path + '/' + filename)
+
+def reset_counter():
+    with open('portfolio/static/.count.txt', 'w') as f:
+        f.write('0')
+    
+    with open('portfolio/static/.prev_count.txt', 'w') as f:
+        f.write('0')
+
+def set_counter():
+    with open('portfolio/static/.count.txt') as f:
+        count = int(f.read())
+    
+    with open('portfolio/static/.prev_count.txt', 'w') as f:
+        f.write(count)
+
+def generate_blogs():
+    with open('portfolio/static/blog-cards.json', 'r') as f:
+        blogs = json.load(f)
+    path = 'portfolio/blog/templates/blog/'
+    for blog in blogs:
+        create_html(blog, blogs[blog], path=path)
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:

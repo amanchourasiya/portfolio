@@ -1,9 +1,9 @@
 {
-    "My_New_Nav": [
+    "asasas": [
         {
             "type": "header",
             "data": {
-                "text": "My New Nav",
+                "text": "asasas",
                 "level": 3
             }
         },
@@ -11,7 +11,7 @@
             "type": "image",
             "data": {
                 "file": {
-                    "url": "/static/blog-images/75.jpg"
+                    "url": "/static/blog-images/1.jpg"
                 },
                 "caption": "",
                 "withBorder": false,
@@ -20,20 +20,11 @@
             }
         }
     ],
-    "Test_Logout": [
+    "qqqq": [
         {
             "type": "header",
             "data": {
-                "text": "Test Logout",
-                "level": 3
-            }
-        }
-    ],
-    "Life_without_CSRF_Token": [
-        {
-            "type": "header",
-            "data": {
-                "text": "Life without CSRF Token",
+                "text": "qqqq",
                 "level": 3
             }
         },
@@ -41,138 +32,20 @@
             "type": "image",
             "data": {
                 "file": {
-                    "url": "/static/blog-images/74.jpg"
-                },
-                "caption": "cd",
-                "withBorder": false,
-                "stretched": false,
-                "withBackground": false
-            }
-        },
-        {
-            "type": "paragraph",
-            "data": {
-                "text": "The design is finished. Next we will work on the hover effect to zoom out the card.The design is finished. Next we will work on the hover effect to zoom out the card.The design is finished. Next we will work on the hover effect to zoom out the card."
-            }
-        },
-        {
-            "type": "paragraph",
-            "data": {
-                "text": "The design is finished. Next we will work on the hover effect to zoom out the card.The design is finished. Next we will work on the hover effect to zoom out the card.The design is finished. Next we will work on the hover effect to zoom out the card."
-            }
-        }
-    ],
-    "Scope_with_Artificial_Intelligence": [
-        {
-            "type": "header",
-            "data": {
-                "text": "Scope with Artificial Intelligence",
-                "level": 3
-            }
-        },
-        {
-            "type": "image",
-            "data": {
-                "file": {
-                    "url": "/static/blog-images/73.jpg"
-                },
-                "caption": "AI",
-                "withBorder": false,
-                "stretched": false,
-                "withBackground": false
-            }
-        },
-        {
-            "type": "paragraph",
-            "data": {
-                "text": "Are you tired of reading endless news stories about ethical hacking and not really knowing what that means&nbsp;Are you tired of reading endless news stories about ethical hacking and not really knowing what that means&nbsp;Are you tired of reading endless news stories about ethical hacking and not really knowing what that means&nbsp;Are you tired of reading endless news stories about ethical hacking and not really knowing what that means"
-            }
-        }
-    ],
-    "How_to_access_other_gmail_password": [
-        {
-            "type": "header",
-            "data": {
-                "text": "How to access other gmail account without knowing password",
-                "level": 3
-            }
-        },
-        {
-            "type": "image",
-            "data": {
-                "file": {
-                    "url": "/static/blog-images/72.jpg"
-                },
-                "caption": "Hacker C$de!!!",
-                "withBorder": false,
-                "stretched": false,
-                "withBackground": false
-            }
-        },
-        {
-            "type": "paragraph",
-            "data": {
-                "text": "Are you tired of reading endless news stories about ethical hacking and not really knowing what that means&nbsp;Are you tired of reading endless news stories about ethical hacking and not really knowing what that means&nbsp;Are you tired of reading endless news stories about ethical hacking and not really knowing what that means&nbsp;Are you tired of reading endless news stories about ethical hacking and not really knowing what that means"
-            }
-        },
-        {
-            "type": "paragraph",
-            "data": {
-                "text": "Are you tired of reading endless news stories about ethical hacking and not really knowing what that means"
-            }
-        },
-        {
-            "type": "list",
-            "data": {
-                "style": "ordered",
-                "items": [
-                    "C",
-                    "C++",
-                    "JAVA<br>",
-                    "PYTHON",
-                    "GO"
-                ]
-            }
-        },
-        {
-            "type": "code",
-            "data": {
-                "code": "print(\"hello\")\nprint(\"hello\")\nprint(\"hello\")print(\"hello\")print(\"hell\nprint(\"hello\")\nprint(\"hello\")\nprint(\"hello\")\nprint(\"hello\")\nprint(\"hello\")print(\"hello\")vprint(\"hello\")\nprint(\"hello\")print(\"hello\")print(\"hello\")print(\"hello\")print(\"hello\")print(\"hello\")print(\"hello\")print(\"hello\")print(\"hello\")\n"
-            }
-        }
-    ],
-    "My_Second_BLOG": [
-        {
-            "type": "header",
-            "data": {
-                "text": "My Second BLOG",
-                "level": 3
-            }
-        },
-        {
-            "type": "image",
-            "data": {
-                "file": {
-                    "url": "/static/blog-images/70.jpg"
+                    "url": "/static/blog-images/1.jpg"
                 },
                 "caption": "",
                 "withBorder": false,
                 "stretched": false,
                 "withBackground": false
             }
-        },
-        {
-            "type": "paragraph",
-            "data": {
-                "text": "Hey"
-            }
         }
     ],
-    "My_Website": [
+    "S3_fourth_blog": [
         {
             "type": "header",
             "data": {
-                "text": "My Website",
+                "text": "S3 fourth blog",
                 "level": 3
             }
         },
@@ -180,32 +53,20 @@
             "type": "image",
             "data": {
                 "file": {
-                    "url": "/static/blog-images/69.jpg"
+                    "url": "/static/blog-images/1.jpg"
                 },
-                "caption": "cd2",
+                "caption": "",
                 "withBorder": false,
                 "stretched": false,
                 "withBackground": false
             }
-        },
-        {
-            "type": "paragraph",
-            "data": {
-                "text": "Are you tired of reading endless news stories about ethical hacking and not really knowing what that means?Are you tired of reading endless news stories about ethical hacking and not really knowing what that means?Are you tired of reading endless news stories about ethical hacking and not really knowing what that mean"
-            }
-        },
-        {
-            "type": "paragraph",
-            "data": {
-                "text": "Are you tired of reading endless news stories about ethical hacking and not really knowing what that means?Are you tired of reading endless news stories about ethical hacking and not really knowing what that means?"
-            }
         }
     ],
-    "My_BLOG": [
+    "S3_Second_blog": [
         {
             "type": "header",
             "data": {
-                "text": "My BLOG",
+                "text": "S3 Second blog",
                 "level": 3
             }
         },
@@ -213,24 +74,33 @@
             "type": "image",
             "data": {
                 "file": {
-                    "url": "/static/blog-images/68.jpg"
+                    "url": "/static/blog-images/1.jpg"
                 },
-                "caption": "cd1",
+                "caption": "",
                 "withBorder": false,
                 "stretched": false,
                 "withBackground": false
             }
-        },
+        }
+    ],
+    "S3_First_Blog": [
         {
-            "type": "paragraph",
+            "type": "header",
             "data": {
-                "text": "Are you tired of reading endless news stories about ethical hacking and not really knowing what that means?Are you tired of reading endless news stories about ethical hacking and not really knowing what that means?Are you tired of reading endless news stories about ethical hacking and not really knowing what that mean"
+                "text": "S3 First Blog",
+                "level": 3
             }
         },
         {
-            "type": "paragraph",
+            "type": "image",
             "data": {
-                "text": "Are you tired of reading endless news stories about ethical hacking and not really knowing what that means?Are you tired of reading endless news stories about ethical hacking and not really knowing what that means?"
+                "file": {
+                    "url": "/static/blog-images/1.jpg"
+                },
+                "caption": "",
+                "withBorder": false,
+                "stretched": false,
+                "withBackground": false
             }
         }
     ]

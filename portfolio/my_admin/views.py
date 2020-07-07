@@ -12,7 +12,7 @@ def login(request):
     return render(request, 'my_admin.html', {})
 
 def check(request):
-    print("before fun")
+    print(" fun")
     if request.method=="POST":
         username=request.POST.get('username')
         password=request.POST.get('password')
