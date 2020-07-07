@@ -214,6 +214,7 @@ color: #fff;
 .blog-content
 {
 	display:flex;
+	height:100%
 	flex-direction:column;
 	text-align:center;
 	width:80%;
