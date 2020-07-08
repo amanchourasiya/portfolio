@@ -127,12 +127,14 @@ def generate_blogs():
         create_html(blog, blogs[blog], path=path)
         
 def check_prerequisites():
-    # Check for blog-images directory
-    blog_images_dir = 'portfolio/static/blog-images'
-    if not os.path.exists(blog_images_dir):
-        cmd = 'mkdir -p portfolio/static/blog-images'
-        os.system(cmd)
-        print('Creating blog-images dir')
+    # Check for necessary directory
+    required_dir = ['portfolio/static/blog-images','portfolio/blog/templates/blog']
+    
+    for dir in required_dir:
+        if not os.path.exists(dir):
+            cmd = f'mkdir -p {dir}'
+            os.system(cmd)
+            print(f'Creating {dir} dir')
     
 
 if __name__ == '__main__':
