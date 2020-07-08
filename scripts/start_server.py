@@ -129,7 +129,7 @@ def generate_blogs():
 def check_prerequisites():
     # Check for blog-images directory
     blog_images_dir = 'portfolio/static/blog-images'
-    if not os.file.exists(blog_images_dir):
+    if not os.path.exists(blog_images_dir):
         cmd = 'mkdir -p portfolio/static/blog-images'
         os.system(cmd)
         print('Creating blog-images dir')
