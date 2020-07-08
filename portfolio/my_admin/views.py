@@ -50,7 +50,7 @@ def save_blog(request):
         title=editor_data['blocks'][0]['data']['text']
         title=re.sub(r"\s+",'_',title)
         
-        fileobj=open("blog/templates/blog/"+title+".html","w")
+        fileobj=open("blog/templates/blog/"+title+".html","w+")
         fileobj.close()
         blog_card_data={title:editor_data}
        
