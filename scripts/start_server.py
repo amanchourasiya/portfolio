@@ -27,7 +27,10 @@ def dev_mode():
 def prod_mode():
     # Cleanup dev blogs used for testing
     cleanup_dev_data()
-
+    
+    # Check prequisites
+    check_prequisites()
+    
     # Download images and blog JSON from persistent storage
     get_persistent_data()
     try:
@@ -122,6 +125,15 @@ def generate_blogs():
     path = 'portfolio/blog/templates/blog/'
     for blog in blogs:
         create_html(blog, blogs[blog], path=path)
+        
+def check_prerequisites():
+    # Check for blog-images directory
+    blog_images_dir = 'portfolio/static/blog-images'
+    if not os.file.exists(blog_images_dir):
+        cmd = 'mkdir -p portfolio/static/blog-images'
+        os.system(cmd)
+        print('Creating blog-images dir')
+    
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
