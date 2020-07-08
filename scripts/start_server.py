@@ -29,7 +29,7 @@ def prod_mode():
     cleanup_dev_data()
     
     # Check prequisites
-    check_prequisites()
+    check_prerequisites()
     
     # Download images and blog JSON from persistent storage
     get_persistent_data()
