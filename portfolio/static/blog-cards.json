@@ -1,0 +1,51 @@
+{
+    "Ethical_Hacking:_Getting_Started": [
+        {
+            "type": "header",
+            "data": {
+                "text": "Ethical Hacking: Getting Started",
+                "level": 3
+            }
+        },
+        {
+            "type": "image",
+            "data": {
+                "file": {
+                    "url": "/static/blog-images/image-3.jpg"
+                },
+                "caption": "google image",
+                "withBorder": false,
+                "stretched": false,
+                "withBackground": false
+            }
+        },
+        {
+            "type": "paragraph",
+            "data": {
+                "text": "People, not computers, create computer threats. Computer predators victimize others for their own gain. Give a predator access to the Internet \u2014 and to your PC \u2014 and the threat they pose to your security increases exponentially. Computer hackers are unauthorized users who break into computer systems in order to steal, change or destroy information, often by installing dangerous malware without your knowledge or consent. Their clever tactics and detailed technical knowledge help them access the information you really do not want them to have."
+            }
+        },
+        {
+            "type": "list",
+            "data": {
+                "style": "unordered",
+                "items": [
+                    "C",
+                    "C++",
+                    "Python",
+                    "Bash"
+                ]
+            }
+        },
+        {
+            "type": "code",
+            "data": {
+                "code": "nmap -sS -O 127.0.0.1\nnmap -sS -O 127.0.0.1\nnmap -sS -O 127.0.0.1\nnmap -sS -O 127.0.0.1\nnmap -sS -O 127.0.0.1"
+            }
+        },
+        {
+            "type": "delimiter",
+            "data": {}
+        }
+    ]
+}
