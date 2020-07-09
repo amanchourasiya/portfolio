@@ -70,7 +70,7 @@ def create_html(title,blocks):
         elif block['type']=='image':
               image='''<div class="text-center">
                      <figure class="figure">
-                     <img src='''+block['data']['file']['url']+''' class="figure-img img-fluid img-thumbnail " style="width:100%;height:70%;"> 
+                     <img src='''+block['data']['file']['url']+''' class="figure-img img-fluid img-thumbnail " style="width:100%;"> 
                      <figcaption class="figure-caption text-center">'''+block['data']['caption']+'''</figcaption>
                      </figure>
                      </div>
