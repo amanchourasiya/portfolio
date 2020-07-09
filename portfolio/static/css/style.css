@@ -97,12 +97,13 @@ padding-top:1px;
 }
 
 .port-desc h1{
-    text-decoration-line: underline;
-	font-family: 'Girassol', cursive;
+    
+	font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+
 }
 .port-desc p{
 	
-	font-family: 'Girassol', cursive;
+	font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
 	margin-top: 50px;
 	margin-left:20px;
 	margin-right: 20px;
@@ -214,7 +215,7 @@ color: #fff;
 .blog-content
 {
 	display:flex;
-	height:100%
+	
 	flex-direction:column;
 	text-align:center;
 	width:80%;
@@ -240,4 +241,9 @@ color: #fff;
 
 .site-title{
 	margin-top:20px;
+	animation-delay: 0.5s;
+}
+.admin-top{
+	margin-top:150px;
+	margin-bottom:170px;
 }
