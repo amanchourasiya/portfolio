@@ -17,9 +17,11 @@ def check(request):
         username=request.POST.get('username')
         password=request.POST.get('password')
         
-
+       
         userName=os.environ['USERNAME']
+     
         passWord=os.environ['PASSWORD']
+      
         
 
         if ((username == userName) and (password==passWord)):
@@ -48,12 +50,10 @@ def save_blog(request):
         
         editor_data=json.loads(request.body)
         title=editor_data['blocks'][0]['data']['text']
-        title=re.sub(r"\s+",'_',title)
+        title=title.replace(":","")
         
-        fileobj=open("blog/templates/blog/"+title+".html","w")
-        fileobj.close()
+        title=re.sub(r"\s+",'_',title)
         blog_card_data={title:editor_data}
-       
         print(editor_data)
         save_cards(title,editor_data['blocks'])
         create_html(title,editor_data['blocks'])
