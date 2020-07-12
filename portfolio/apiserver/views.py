@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 from .idgenerator import getID
+from utils import boto3_util
 
 @csrf_exempt
 def image(request):
@@ -10,13 +11,19 @@ def image(request):
         
         img_data=request.FILES['image'].read()
         ID=getID()
-        print(id,ID)
-        fileobj=open("static/blog-images/"+str(ID)+".jpg","wb")
-        fileobj.write(img_data)
-        fileobj.close()
-       
-        data={"success" : 1,"file": {"url" : "/static/blog-images/"+str(ID)+".jpg",}}
-        
+        image_name = 'static/blog-images/' + ID + '.jpg'
+        with open(image_name, "wb") as f:
+            f.write(img_data)
+        print(image_name)
+        try:
+            url = boto3_util.upload_image(image_name, str(ID) + '.jpg')
+        except Exception as e:
+            print(e)
+        data={'success' : 1,
+               'file': 
+                      {'url' : url}
+             }
+        print('url:',url)
 
         return JsonResponse(data,safe=False)
 
