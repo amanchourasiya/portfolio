@@ -28,14 +28,6 @@ def save_persistent_data():
     # Saving blog-cards.json to persistent storage , this file is used to generate 
     # data dynamically
     boto3_util.upload_persistent_data('static/blog-cards.json', 'blogs/blog-cards.json')
-    with open('static/.count.txt', 'r') as f:
-        count = int(f.read())
-    
-    with open('static/.prev_count.txt') as f:
-        prev_count = int(f.read())
-    
-    files_tobe_uploaded = range(prev_count + 1, count + 1)
-    boto3_util.upload_images('static/blog-images/', files_tobe_uploaded)
 
     # Uploading count marker file
     boto3_util.upload_persistent_data('static/.count.txt','count.txt')
