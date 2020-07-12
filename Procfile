@@ -1,1 +1,1 @@
-web: python3 -m http.server 80
+web: python3 scripts/start_server.py prod

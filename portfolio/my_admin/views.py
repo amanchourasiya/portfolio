@@ -4,6 +4,7 @@ from django.views.decorators.csrf import csrf_exempt
 import json
 from django.http import JsonResponse
 import re
+import os
 from my_admin.html_generator import create_html
 from my_admin.save_cards import save_cards
 
@@ -11,17 +12,19 @@ def login(request):
     return render(request, 'my_admin.html', {})
 
 def check(request):
-    print("before fun")
+    print(" fun")
     if request.method=="POST":
         username=request.POST.get('username')
         password=request.POST.get('password')
         
-
-        userName=Login.objects.values('userName')
-        passWord=Login.objects.values('passWord')
+       
+        userName=os.environ['USERNAME']
+     
+        passWord=os.environ['PASSWORD']
+      
         
 
-        if ((username == userName[0]['userName']) and (password==passWord[0]['passWord'])):
+        if ((username == userName) and (password==passWord)):
             request.session['username']=username
             return redirect('./add_blog')
         else:
@@ -47,12 +50,12 @@ def save_blog(request):
         
         editor_data=json.loads(request.body)
         title=editor_data['blocks'][0]['data']['text']
-        title=re.sub(r"\s+",'_',title)
+        title=title.replace(":","")
         
-        fileobj=open("blog/templates/blog/"+title+".html","w")
-        fileobj.close()
+
+        title=re.sub(r"\s+",'_',title)
+
         blog_card_data={title:editor_data}
-       
         print(editor_data)
         save_cards(title,editor_data['blocks'])
         create_html(title,editor_data['blocks'])

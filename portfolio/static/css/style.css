@@ -1,5 +1,32 @@
+
+.site-background{
+   padding-top: 10rem;
+text-align:center; 
+ color:white;
+}
+.site-btn{
+	margin:1.8rem;
+	background:#87CEEB;
+	border:none;
+	border-radius:2rem;
+	padding:0.7rem 2.5rem;
+	font-size:1rem;
+	font-family:var(--Livvic);
+	cursor:pointer;
+}
+.site-btn:hover{
+background: transparent;
+border: 1px solid white;
+color: white;
+}
+
 .container-fluid{
 overflow:hidden;
+}
+
+h1{
+	font-family:var(--Lexend);
+	font-size:2.5rem;
 }
 .fill-screen{
 	
@@ -9,8 +36,14 @@ overflow:hidden;
 	
 }
 .content-filler{
-	min-height: 350px;
+	min-height: 450px;
 	
+}
+@media (max-width: 350px){
+	
+.content-filler{
+		min-height: 450px;
+	}
 }
 .content-filler-top{
 	min-height: 200px;
@@ -64,12 +97,13 @@ padding-top:1px;
 }
 
 .port-desc h1{
-    text-decoration-line: underline;
-	font-family: 'Girassol', cursive;
+    
+	font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+
 }
 .port-desc p{
 	
-	font-family: 'Girassol', cursive;
+	font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
 	margin-top: 50px;
 	margin-left:20px;
 	margin-right: 20px;
@@ -142,22 +176,74 @@ text-align:justify;
 .single-blog h5{
 	margin-top: 10px;
 	font-size: 16px;
-	color: #007bff;
+	color: black;
 }
 .single-blog h5 a{
 	text-decoration: none;
 }
 .read-more-btn{
 background-image: linear-gradient(to right, #1c03b5,#5c8bef);
-padding; 5px 12px 8px;
-border-radius: 20px;
+padding: 0.7rem 1rem;
+border-radius: 2rem;
 line-height:20px;
 font-size: 14px;
 color: #fff;
 border: none!important:
+cursor: pointer;
 }
 .read-more-btn:hover{
 background-image: linear-gradient(to right, #006417,#00b128);
 text-decoration: none;
 color: #fff;
+}
+.blog-site{
+	
+	
+}
+
+.blog-post{
+	padding-top: 4rem;
+	
+}
+@media (max-width: 417px){
+	
+.blog-post{
+		padding-top: 9rem;
+	background:white:
+	}
+}
+.blog-content
+{
+	display:flex;
+	flex-direction:column;
+	text-align:center;
+	width:80%;
+	margin: 3rem 2rem;
+	box-shadow: 0px 15px 20px rgba(0,0,0,0.2);
+	
+	
+}
+.blog-index-btn{
+	margin:0.8rem;
+	background:#87CEEB;
+	border:none;
+	border-radius:2rem;
+	padding:0.2rem 0.5rem;
+	font-size:1rem;
+	font-family:var(--Livvic);
+	cursor:pointer;
+}
+.container-owl{
+	margin: 0 5vw;
+}
+
+
+.site-title{
+	margin-top:20px;
+	animation-delay: 0.5s;
+}
+.admin-top{
+	margin-top:150px;
+	margin-bottom:170px;
+
 }

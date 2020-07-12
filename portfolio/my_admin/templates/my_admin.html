@@ -1,7 +1,8 @@
+{% extends "base.html" %}
+{% load static%} 
+{% block page_content %}
+<div ></div>
 
-<!DOCTYPE html>
-
-<html lang="en-us" >
 <head>
 <title>Log in | Django site admin</title>
 <link rel="stylesheet" type="text/css" href="/static/admin/css/base.css">
@@ -19,7 +20,7 @@
 </head>
 
 
-<body class=" login"
+<div class=" login admin-top"
   data-admin-utc-offset="0">
 
 <!-- Container -->
@@ -82,9 +83,10 @@
     </div>
     <!-- END Content -->
 
-    <div id="footer"></div>
+ 
 </div>
 <!-- END Container -->
 
-</body>
-</html>
+</div>
+
+{% endblock %}

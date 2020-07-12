@@ -5,35 +5,40 @@
 	<meta name="google-site-verification" content="UWZvQZ1V61UOV7vRiEO4B6fw5zSG564goDnTUq5j450" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-  
+ 
+  <link rel="stylesheet" href="{%static 'css/owl.carousel.min.css'%}">
+  <link rel="stylesheet" href="{%static 'css/owl.theme.default.min.css'%}">
+  <link rel="stylesheet" href="{%static 'css/animate.css'%}">
   <link rel="stylesheet" href="{%static 'css/style.css'%}">
+  <link rel="icon" href="{%static 'img/logo.png'%}" type="image/icon type">
+  
     </head>
 	
 <body>	
 
-<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-  <a class="navbar-brand" href="#">Aman</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top " style="    background-color: #000000fc;">
+  <a class="navbar-brand" href="/"><img class="img-fluid" src="{% static 'img/logo.png' %}" width="60px; height:20px;"></a>
+  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="/"><i class="fa fa-fw fa-home"></i>Home</a>
+        <a class="nav-link " href="/"><i class="fa fa-fw fa-home"></i>Home</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item ">
         <a  href={%url 'blog'%} class="nav-link"><i class="fab fa-blogger-b"></i>log</a>
       </li>
       <li class="nav-item">
         <a  href={%url 'port'%} class="nav-link" > <i class="fa fa-user"></i>Portfolio</a>
       </li>    
-	   <li class="nav-item" >
+	  <!-- <li class="nav-item" >
         <a   class="nav-link" href="#"><i class="fa fa-pencil-square-o"></i>Post</a>
       </li> 
+	  -->
 	 {% block navbar %}
 	  {% endblock %}
     </ul>
@@ -48,13 +53,13 @@
 {% endblock %}
 
 <!-- Footer -->
-<footer class="page-footer font-small text-white50 bg-dark ">
+<footer class="page-footer font-small text-white " style="    background-color: #000000fc;">
 
   <!-- Footer Elements -->
-  <div class="container">
+  
 
     <!-- Grid row-->
-    <div class="row text-center">
+    <div class="text-center">
 
       <!-- Grid column -->
       <div class="col-md-12 pt-5 pb-0">
@@ -86,7 +91,7 @@
       </div>
       <!-- Grid column -->
 
-    </div>
+    
     <!-- Grid row-->
 
   </div>
@@ -101,12 +106,11 @@
 
 </footer>
 
-<script>
-  $(function(){
-    $(window).on("load resize",function(){
-	  $(".fill-screen").css("height",window.innerHeight);
-	  });
-	  });
-	  </script>
+
+	  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="{%static 'js/owl.carousel.min.js'%}"></script>
+   <script src="{%static 'js/main.js'%}"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 </body>

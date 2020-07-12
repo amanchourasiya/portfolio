@@ -1,6 +1,6 @@
 from django.shortcuts import render
 import json
-
+import os
 
 def add_blog(request,title):
     
@@ -8,9 +8,9 @@ def add_blog(request,title):
 
 
 def blog(request):
+    if not os.path.exists('static/blog-cards.json'):
+        return render(request, 'blog.html',{})
     with open("static/blog-cards.json","r") as fileobj:
         data=json.load(fileobj)
-    print(data)
-        
 
     return render(request,"blog.html",{'data':data})

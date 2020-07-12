@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '0-i5xdj34+)h9r0rrnsson_wz1^@1j-e%ho4+nd)*ya(qs#sk3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -78,12 +78,16 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
+if 'DATABASE_URL' in os.environ:
+    import dj_database_url 
+    DATABASES = { 'default': dj_database_url.config()}
+else:
+    DATABASES = {
+        'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+                   }
+                }
 
 
 # Password validation
@@ -123,11 +127,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS=(os.path.join(BASE_DIR,"static"),)
+#STATICFILES_DIRS=(os.path.join(BASE_DIR,"static"),)
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-#  Add configuration for static files storage using whitenoise
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
-import dj_database_url 
-prod_db  =  dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(prod_db)
+import whitenoise
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'

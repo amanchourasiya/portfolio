@@ -1,9 +1,9 @@
 {
-    "Life_without_CSRF_Token": [
+    "Ethical_Hacking:_Getting_Started": [
         {
             "type": "header",
             "data": {
-                "text": "Life without CSRF Token",
+                "text": "Ethical Hacking: Getting Started",
                 "level": 3
             }
         },
@@ -11,9 +11,9 @@
             "type": "image",
             "data": {
                 "file": {
-                    "url": "/static/blog-images/74.jpg"
+                    "url": "/static/blog-images/image-3.jpg"
                 },
-                "caption": "cd",
+                "caption": "google image",
                 "withBorder": false,
                 "stretched": false,
                 "withBackground": false
@@ -22,186 +22,30 @@
         {
             "type": "paragraph",
             "data": {
-                "text": "The design is finished. Next we will work on the hover effect to zoom out the card.The design is finished. Next we will work on the hover effect to zoom out the card.The design is finished. Next we will work on the hover effect to zoom out the card."
-            }
-        },
-        {
-            "type": "paragraph",
-            "data": {
-                "text": "The design is finished. Next we will work on the hover effect to zoom out the card.The design is finished. Next we will work on the hover effect to zoom out the card.The design is finished. Next we will work on the hover effect to zoom out the card."
-            }
-        }
-    ],
-    "Scope_with_Artificial_Intelligence": [
-        {
-            "type": "header",
-            "data": {
-                "text": "Scope with Artificial Intelligence",
-                "level": 3
-            }
-        },
-        {
-            "type": "image",
-            "data": {
-                "file": {
-                    "url": "/static/blog-images/73.jpg"
-                },
-                "caption": "AI",
-                "withBorder": false,
-                "stretched": false,
-                "withBackground": false
-            }
-        },
-        {
-            "type": "paragraph",
-            "data": {
-                "text": "Are you tired of reading endless news stories about ethical hacking and not really knowing what that means&nbsp;Are you tired of reading endless news stories about ethical hacking and not really knowing what that means&nbsp;Are you tired of reading endless news stories about ethical hacking and not really knowing what that means&nbsp;Are you tired of reading endless news stories about ethical hacking and not really knowing what that means"
-            }
-        }
-    ],
-    "How_to_access_other_gmail_password": [
-        {
-            "type": "header",
-            "data": {
-                "text": "How to access other gmail account without knowing password",
-                "level": 3
-            }
-        },
-        {
-            "type": "image",
-            "data": {
-                "file": {
-                    "url": "/static/blog-images/72.jpg"
-                },
-                "caption": "Hacker C$de!!!",
-                "withBorder": false,
-                "stretched": false,
-                "withBackground": false
-            }
-        },
-        {
-            "type": "paragraph",
-            "data": {
-                "text": "Are you tired of reading endless news stories about ethical hacking and not really knowing what that means&nbsp;Are you tired of reading endless news stories about ethical hacking and not really knowing what that means&nbsp;Are you tired of reading endless news stories about ethical hacking and not really knowing what that means&nbsp;Are you tired of reading endless news stories about ethical hacking and not really knowing what that means"
-            }
-        },
-        {
-            "type": "paragraph",
-            "data": {
-                "text": "Are you tired of reading endless news stories about ethical hacking and not really knowing what that means"
+                "text": "People, not computers, create computer threats. Computer predators victimize others for their own gain. Give a predator access to the Internet \u2014 and to your PC \u2014 and the threat they pose to your security increases exponentially. Computer hackers are unauthorized users who break into computer systems in order to steal, change or destroy information, often by installing dangerous malware without your knowledge or consent. Their clever tactics and detailed technical knowledge help them access the information you really do not want them to have."
             }
         },
         {
             "type": "list",
             "data": {
-                "style": "ordered",
+                "style": "unordered",
                 "items": [
                     "C",
                     "C++",
-                    "JAVA<br>",
-                    "PYTHON",
-                    "GO"
+                    "Python",
+                    "Bash"
                 ]
             }
         },
         {
             "type": "code",
             "data": {
-                "code": "print(\"hello\")\nprint(\"hello\")\nprint(\"hello\")print(\"hello\")print(\"hell\nprint(\"hello\")\nprint(\"hello\")\nprint(\"hello\")\nprint(\"hello\")\nprint(\"hello\")print(\"hello\")vprint(\"hello\")\nprint(\"hello\")print(\"hello\")print(\"hello\")print(\"hello\")print(\"hello\")print(\"hello\")print(\"hello\")print(\"hello\")print(\"hello\")\n"
-            }
-        }
-    ],
-    "My_Second_BLOG": [
-        {
-            "type": "header",
-            "data": {
-                "text": "My Second BLOG",
-                "level": 3
+                "code": "nmap -sS -O 127.0.0.1\nnmap -sS -O 127.0.0.1\nnmap -sS -O 127.0.0.1\nnmap -sS -O 127.0.0.1\nnmap -sS -O 127.0.0.1"
             }
         },
         {
-            "type": "image",
-            "data": {
-                "file": {
-                    "url": "/static/blog-images/70.jpg"
-                },
-                "caption": "",
-                "withBorder": false,
-                "stretched": false,
-                "withBackground": false
-            }
-        },
-        {
-            "type": "paragraph",
-            "data": {
-                "text": "Hey"
-            }
-        }
-    ],
-    "My_Website": [
-        {
-            "type": "header",
-            "data": {
-                "text": "My Website",
-                "level": 3
-            }
-        },
-        {
-            "type": "image",
-            "data": {
-                "file": {
-                    "url": "/static/blog-images/69.jpg"
-                },
-                "caption": "cd2",
-                "withBorder": false,
-                "stretched": false,
-                "withBackground": false
-            }
-        },
-        {
-            "type": "paragraph",
-            "data": {
-                "text": "Are you tired of reading endless news stories about ethical hacking and not really knowing what that means?Are you tired of reading endless news stories about ethical hacking and not really knowing what that means?Are you tired of reading endless news stories about ethical hacking and not really knowing what that mean"
-            }
-        },
-        {
-            "type": "paragraph",
-            "data": {
-                "text": "Are you tired of reading endless news stories about ethical hacking and not really knowing what that means?Are you tired of reading endless news stories about ethical hacking and not really knowing what that means?"
-            }
-        }
-    ],
-    "My_BLOG": [
-        {
-            "type": "header",
-            "data": {
-                "text": "My BLOG",
-                "level": 3
-            }
-        },
-        {
-            "type": "image",
-            "data": {
-                "file": {
-                    "url": "/static/blog-images/68.jpg"
-                },
-                "caption": "cd1",
-                "withBorder": false,
-                "stretched": false,
-                "withBackground": false
-            }
-        },
-        {
-            "type": "paragraph",
-            "data": {
-                "text": "Are you tired of reading endless news stories about ethical hacking and not really knowing what that means?Are you tired of reading endless news stories about ethical hacking and not really knowing what that means?Are you tired of reading endless news stories about ethical hacking and not really knowing what that mean"
-            }
-        },
-        {
-            "type": "paragraph",
-            "data": {
-                "text": "Are you tired of reading endless news stories about ethical hacking and not really knowing what that means?Are you tired of reading endless news stories about ethical hacking and not really knowing what that means?"
-            }
+            "type": "delimiter",
+            "data": {}
         }
     ]
 }
