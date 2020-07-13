@@ -3,10 +3,10 @@
 {% block page_content %}
 
  <main>
-  <section  style="background:url('{% static 'img/code11.jpg' %}');background-size:cover;height:110vh;display: flex;justify-content:center;margin-top:0px;">
+  <section  style="background:url('{% static 'img/code11.jpg' %}');-webkit-background-size:cover;-moz-background-size:cover;height:110vh;no-repeat center center fixed;display: flex;justify-content:center;margin-top:0px;">
    <div class="site-background">
      <h3 class="site-title animated bounce ">Techie Aman</h3>
-     <h1 class="animated zoomIn" > Enough Talk Show Me The Co$e</h1>
+     <h1 class="site-title2 animated zoomIn" > Enough Talk Show Me The Co$e</h1>
 	 <a href={%url 'blog'%}><button   class="site-btn animated zoomIn">Explore</button></a>
    
    </div>
@@ -14,7 +14,7 @@
 </section>
   
   <section  style="backgroud-color:white;background-repeat:no-repeat;background-position:right;width:100%;">
-<h1 class="text-center  mt-5">Popular Blogs</h1>  
+<h1 class="text-center head-corousal  mt-5">Recent Blogs</h1>  
   <div class="container-owl mb-5">
      <div class="owl-carousel owl-theme blog-post">
 	 {{ forloop.counter }}

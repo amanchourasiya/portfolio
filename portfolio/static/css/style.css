@@ -101,6 +101,7 @@ padding-top:1px;
 	font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
 
 }
+
 .port-desc p{
 	
 	font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -108,6 +109,15 @@ padding-top:1px;
 	margin-left:20px;
 	margin-right: 20px;
 	line-height: 1.9;
+}
+@media (max-width: 450px){
+	
+.port-desc p{
+		margin-top:0px;
+		margin-left:0px;
+	    margin-right:0px;
+		height:200px;
+	}
 }
 
 .hello{
@@ -202,13 +212,13 @@ color: #fff;
 }
 
 .blog-post{
-	padding-top: 4rem;
+	padding-top: 0px;
 	
 }
 @media (max-width: 417px){
 	
 .blog-post{
-		padding-top: 9rem;
+		padding-bottom: 5rem;
 	background:white:
 	}
 }
@@ -240,10 +250,43 @@ color: #fff;
 
 .site-title{
 	margin-top:20px;
+	font-size:30px;
 	animation-delay: 0.5s;
 }
+@media (max-width: 417px){
+	
+.site-title{
+		padding-top:70px;
+	font-size:15px;
+	animation-delay: 0.5s;
+	}
+}
+.site-title2{
+	margin-top:20px;
+	font-size:40px;
+}
+@media (max-width: 417px){
+	
+.site-title2{
+		margin-top:20px;
+	font-size:25px;
+	animation-delay: 0.5s;
+	}
+}
+
 .admin-top{
 	margin-top:150px;
 	margin-bottom:170px;
 
+}
+.head-corousal{
+	 margin-bottom:20px;
+	    line-height: 40px;
+		    font-size: 30px;
+			font-family: medium-content-title-font, Georgia, Cambria, "Times New Roman", Times, serif;
+			color: rgba(41, 41, 41, 1);
+			letter-spacing: 0;
+			font-style: normal;
+			    font-weight: 900;
+			
 }
