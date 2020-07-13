@@ -1,1 +1,1 @@
-web: gunicorn -b 0.0.0.0:$PORT --chdir portfolio/ portfolio.wsgi --log-file -
+web: python3 scripts/start_server.py prod
