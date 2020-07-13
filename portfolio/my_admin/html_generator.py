@@ -1,30 +1,41 @@
 def create_html(title,blocks, path='blog/templates/blog/'):
     flag=0
+
+    header_flag=0
     fileobj=open(path + title + ".html","w+")
     navbar='''
 
-         {% extends "base.html" %}
-     {% load static%} 
-     {% block page_content %}
+    {% extends "base.html" %}
+    {% load static%} 
+    {% block page_content %}
     '''
 
     fileobj.write(navbar)
- 
+    blog_structure='''<div container-fluid class="blog" >'''
+    fileobj.write(blog_structure)
     for block in blocks:
         if block['type']=='header':
+            if header_flag==0:
+            
                header='''
-                     
-                     
-                        <div container-fluid class="blog" >                       
-                        <h1 class="text-center head-blog" style="margin-top:70px;">'''+block['data']['text']+'''</h1>
-                    
-                     
-                   
-                       
- 
-                      '''
-               fileobj.write(header)
+                      <h1 class="text-center head-blog" style="margin-top:70px;">'''+block['data']['text']+'''</h1>
+                     '''
               
+            else:
+                if block['data']['level']==2:
+                    header='''
+                      <h1 class="head-blog" style=" margin-top:40px;">'''+block['data']['text']+'''</h1>
+                     '''  
+                elif block['data']['level']==3:
+                    header='''
+                      <h2 class="head-blog" style="font-size: 26px; margin-top:40px;">'''+block['data']['text']+'''</h2>
+                     '''      
+                elif block['data']['level']==4:
+                    header='''
+                      <h3 class="head-blog" style=" font-size: 22px; margin-top:40px;">'''+block['data']['text']+'''</h3>
+                     ''' 
+            header_flag+=1
+            fileobj.write(header)
         elif block['type']=='paragraph':
             if flag==0:               
                 paragraph='''
