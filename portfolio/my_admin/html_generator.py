@@ -23,11 +23,11 @@ def create_html(title,blocks):
             else:
                 if block['data']['level']==2:
                     header='''
-                      <h1 class="head-blog" style="font-size: 26px; margin-top:40px;">'''+block['data']['text']+'''</h1>
+                      <h1 class="head-blog" style=" margin-top:40px;">'''+block['data']['text']+'''</h1>
                      '''  
                 elif block['data']['level']==3:
                     header='''
-                      <h2 class="head-blog" style="margin-top:40px;">'''+block['data']['text']+'''</h2>
+                      <h2 class="head-blog" style="font-size: 26px; margin-top:40px;">'''+block['data']['text']+'''</h2>
                      '''      
                 elif block['data']['level']==4:
                     header='''
