@@ -1,7 +1,7 @@
 
 .site-background{
    padding-top: 10rem;
-text-align:center; 
+text-align:center;
  color:white;
 }
 .site-btn{
@@ -88,7 +88,7 @@ font-family: Snell Roundhand,cursive;
 
 .col-md-6
 {
-	height: 475px;
+	height: 100vh;
 background-color: #15155c;
 color:white;
 
