@@ -18,6 +18,37 @@ def create_html(title,blocks):
             
                header='''
                       <h1 class="text-center head-blog" style="margin-top:70px;">'''+block['data']['text']+'''</h1>
+                      <div class="post-socialIcons">
+                         <ul>
+                           <li class="socialIcons-links socialIcons-links-twitter">
+                           <a id="twiId" class="fa fa-twitter" href="https://twitter.com/share?url=" target="_blank"></a>
+                           <script>
+                                var reddit_share_api=document.getElementById('twiId').href
+                                var current_location=window.location.href
+                                document.getElementById('twiId').href=reddit_share_api+current_location
+                           </script>
+                           </li>
+                           <li class="socialIcons-links socialIcons-links-facebook">
+                           <a id="fbId" class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank"></a>
+                           <script>
+                                var reddit_share_api=document.getElementById('fbId').href
+                                var current_location=window.location.href
+                                document.getElementById('fbId').href=reddit_share_api+current_location
+                           </script>
+                           </li>
+                            <li class="socialIcons-links socialIcons-links-reddit">
+                           <a id="redId" class="fa fa-reddit-alien" href="https://reddit.com/submit?url=" target="_blank"></a>
+                           <script>
+                                var reddit_share_api=document.getElementById('redId').href
+                                var current_location=window.location.href
+                                document.getElementById('redId').href=reddit_share_api+current_location
+                           </script>
+                           </li>
+                          
+                          
+                         </ul>
+                      </div>
+                      <h6 class="text-center">'''+block['date']+'''</h6><br>
                      '''
               
             else:
@@ -70,6 +101,12 @@ def create_html(title,blocks):
                    
         elif block['type']=='quote':
                pass
+               
+        elif block['type']=='embed':
+            youtube='''  <iframe height="345" src="'''+block['data']['embed']+'''" style="width:100%;"></iframe>'''
+            fileobj.write(youtube)
+        
+        
         elif block['type']=='code':
                
                code='''<div style="text-align:center;"> <textarea  style=" width:100%;
