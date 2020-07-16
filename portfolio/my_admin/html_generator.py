@@ -1,4 +1,8 @@
+import datetime
+
 def create_html(title,blocks, path='blog/templates/blog/'):
+    blog_default_date=datetime.today()
+    blog_default_date=blog_default_date.strftime("%d %B %Y")
     flag=0
 
     header_flag=0
@@ -49,7 +53,7 @@ def create_html(title,blocks, path='blog/templates/blog/'):
                           
                          </ul>
                       </div>
-                      <h6 class="text-center">'''+block['date']+'''</h6><br>
+                      <h6 class="text-center">'''+block.get('date',default=blog_default_date)+'''</h6><br>
                      '''
               
             else:
