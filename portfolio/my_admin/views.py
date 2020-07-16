@@ -7,6 +7,7 @@ import re
 import os
 from my_admin.html_generator import create_html
 from my_admin.save_cards import save_cards
+import datetime
 
 def login(request):
     return render(request, 'my_admin.html', {})
@@ -16,14 +17,8 @@ def check(request):
     if request.method=="POST":
         username=request.POST.get('username')
         password=request.POST.get('password')
-        
-       
         userName=os.environ['USERNAME']
-     
         passWord=os.environ['PASSWORD']
-      
-        
-
         if ((username == userName) and (password==passWord)):
             request.session['username']=username
             return redirect('./add_blog')
@@ -51,9 +46,11 @@ def save_blog(request):
         editor_data=json.loads(request.body)
         title=editor_data['blocks'][0]['data']['text']
         title=title.replace(":","")
-        
 
         title=re.sub(r"\s+",'_',title)
+        date=datetime.date.today()
+        date=date.strftime("%d %B %Y")
+        editor_data['blocks'][0].update({'date':date})
 
         blog_card_data={title:editor_data}
         print(editor_data)

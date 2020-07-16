@@ -95,6 +95,17 @@ color:white;
 padding-top:1px;
 
 }
+@media (max-width: 450px){
+	
+.col-md-6{
+		height: 100vh;
+background-color: #15155c;
+color:white;
+padding-top:1px;
+line-height:1.9;
+
+	}
+}
 
 .port-desc h1{
     
@@ -109,6 +120,7 @@ padding-top:1px;
 	margin-left:20px;
 	margin-right: 20px;
 	line-height: 1.9;
+	font-size:18px;
 }
 @media (max-width: 450px){
 	
@@ -202,10 +214,13 @@ border: none!important:
 cursor: pointer;
 }
 .read-more-btn:hover{
+
 background-image: linear-gradient(to right, #006417,#00b128);
 text-decoration: none;
 color: #fff;
+
 }
+
 .blog-site{
 	
 	
@@ -290,3 +305,50 @@ color: #fff;
 			    font-weight: 900;
 			
 }
+
+.post-socialIcons{
+    margin: 1.84615rem 0;
+	    text-align: center;
+    margin-right: 40px;
+}
+.post-socialIcons .socialIcons-links{
+    width: 30px;
+    height: 30px;
+    margin: 0 7px;
+}
+.post-socialIcons .socialIcons-links-twitter a{
+	background-color: #00aced;
+}
+.post-socialIcons .fa {
+    text-decoration: none;
+	text-align: center;
+}
+.socialIcons-links a {
+    color: #ffffff;
+    display: block;
+    
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+    padding-top: 8px;
+}
+.post-socialIcons .socialIcons-links-facebook a {
+    background-color: #3b5998;
+}
+.post-socialIcons .socialIcons-links-reddit a{
+    background-color: #000000;
+}
+.socialIcons-links {
+    display: inline-table;
+    margin-left: 15px;
+}
+.fa {
+  
+    font: normal normal normal 14px/1 FontAwesome;
+ 
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  
+}
+
