@@ -1,7 +1,7 @@
 import datetime
 
 def create_html(title,blocks, path='blog/templates/blog/'):
-    blog_default_date=datetime.today()
+    blog_default_date=datetime.date.today()
     blog_default_date=blog_default_date.strftime("%d %B %Y")
     flag=0
 
