@@ -1,7 +1,7 @@
 
 .site-background{
    padding-top: 10rem;
-text-align:center; 
+text-align:center;
  color:white;
 }
 .site-btn{
@@ -240,7 +240,6 @@ color: #fff;
 .blog-content
 {
 	display:flex;
-	
 	flex-direction:column;
 	text-align:center;
 	width:80%;
@@ -293,6 +292,7 @@ color: #fff;
 .admin-top{
 	margin-top:150px;
 	margin-bottom:170px;
+
 }
 .head-corousal{
 	 margin-bottom:20px;
@@ -305,6 +305,7 @@ color: #fff;
 			    font-weight: 900;
 			
 }
+
 .post-socialIcons{
     margin: 1.84615rem 0;
 	    text-align: center;
@@ -350,3 +351,4 @@ color: #fff;
     -webkit-font-smoothing: antialiased;
   
 }
+

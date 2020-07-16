@@ -13,7 +13,7 @@ def login(request):
     return render(request, 'my_admin.html', {})
 
 def check(request):
-    print("before fun")
+    print(" fun")
     if request.method=="POST":
         username=request.POST.get('username')
         password=request.POST.get('password')
@@ -46,10 +46,12 @@ def save_blog(request):
         editor_data=json.loads(request.body)
         title=editor_data['blocks'][0]['data']['text']
         title=title.replace(":","")
+
         title=re.sub(r"\s+",'_',title)
         date=datetime.date.today()
         date=date.strftime("%d %B %Y")
         editor_data['blocks'][0].update({'date':date})
+
         blog_card_data={title:editor_data}
         print(editor_data)
         save_cards(title,editor_data['blocks'])

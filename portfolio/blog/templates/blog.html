@@ -15,7 +15,7 @@
 	<div class="single-blog">
 	<img  src={{value.1.data.file.url}} style="width:100%;" height="200" alt="Card image cap">
 	
-    <h5><a href="">{{value.0.data.text|truncatechars:34}}</a></h5>
+    <h5><a href={%url 'blog'%}{{key}} >{{value.0.data.text|truncatechars:34}}</a></h5>
     <p class="blog-text">{{value.2.data.text|truncatechars:100}}</p>
     <p><a  href={%url 'blog'%}{{key}} class="read-more-btn">Read more</a></p>
   
