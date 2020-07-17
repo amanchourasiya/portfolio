@@ -86,7 +86,6 @@ def get_persistent_data():
         s3.meta.client.download_file(Bucket=bucket_name,
                                      Key='count.txt',
                                      Filename='portfolio/static/.count.txt')
-        set_counter()
     except:
         reset_counter()
 
@@ -106,16 +105,6 @@ def get_blog_images(s3_resource, bucket_name):
 def reset_counter():
     with open('portfolio/static/.count.txt', 'w') as f:
         f.write('0')
-    
-    with open('portfolio/static/.prev_count.txt', 'w') as f:
-        f.write('0')
-
-def set_counter():
-    with open('portfolio/static/.count.txt') as f:
-        count = int(f.read())
-    
-    with open('portfolio/static/.prev_count.txt', 'w') as f:
-        f.write(count)
 
 def generate_blogs():
     if not os.path.exists('portfolio/static/blog-cards.json'):
