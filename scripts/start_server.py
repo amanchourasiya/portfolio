@@ -22,21 +22,27 @@ def usage():
     print('server-mode: dev/prod')
 
 def dev_mode():
-    pass
+    # Check prerequisites
+    check_prerequisites()
+
+    # Start server
+    start()
 
 def prod_mode():
     # Cleanup dev blogs used for testing
     cleanup_dev_data()
     
-    # Check prequisites
+    # Check prerequisites
     check_prerequisites()
     
     # Download images and blog JSON from persistent storage
     get_persistent_data()
-    try:
-        port = os.environ['PORT']
-    except:
-        port = 80
+    
+    # Start server
+    start()
+
+def start():
+    port = os.environ.get('PORT', 80)
     os.system('gunicorn -b 0.0.0.0:' + str(port) + ' --chdir portfolio/ portfolio.wsgi --log-file -')
 
 def cleanup_dev_data():
@@ -61,13 +67,14 @@ def get_persistent_data():
     try:
         aws_access_key_id = os.environ['AWS_ACCESS_KEY_ID']
         aws_secret_access_key = os.environ['AWS_SECRET_ACCESS_KEY']
+        aws_region = os.environ['AWS_REGION']
+        bucket_name = os.environ['AWS_BUCKET_NAME']
     except:
         print('AWS credentials not supplied in env')
         sys.exit(1)
 
-    aws_region = 'ap-south-1'
     blog_json_file = 'portfolio/static/blog-cards.json'
-    bucket_name = 'amanchourasiya'
+    
 
     s3 = boto3.resource('s3',
                         aws_access_key_id=aws_access_key_id,
