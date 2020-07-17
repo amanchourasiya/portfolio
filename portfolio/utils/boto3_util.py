@@ -2,10 +2,9 @@ import boto3
 import sys
 import os
 
-
-image_url = 'https://amanchourasiya.s3.ap-south-1.amazonaws.com/'
-bucket_name = 'amanchourasiya'
-region = 'ap-south-1'
+bucket_name = os.environ.get('AWS_BUCKET_NAME','')
+region = os.environ.get('AWS_REGION','')
+image_url = 'https://' + bucket_name + '.s3.' + region +'.amazonaws.com/'
 def get_s3():
     try:
         aws_access_key_id = os.environ['AWS_ACCESS_KEY_ID']
@@ -23,20 +22,6 @@ def get_s3():
                         region_name=aws_region )
     return __s3
 
-def get_bucket_name():
-    global __bucket_name
-    if not __bucket_name:
-        __bucket_name = 'amanchourasiya'
-    
-    return __bucket_name
-
-def get_region():
-    global __region
-    if not __region:
-        __region = 'ap-south-1'
-    
-    return __region
-
 def upload_persistent_data(file_name, key):
     s3 = get_s3()                
     s3.meta.client.upload_file(Bucket=bucket_name,
@@ -49,7 +34,7 @@ def upload_images(path, count):
         key = 'blog-images/image-' + str(i) + '.jpg'
         file_name = path + 'image-' + str(i) + '.jpg'
 
-        s3.meta.client.upload_file(Bucket=get_bucket_name(),
+        s3.meta.client.upload_file(Bucket=bucket_name,
                                    Filename=file_name,
                                    Key=key)
 

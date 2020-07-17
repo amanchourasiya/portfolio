@@ -1,0 +1,20 @@
+# These environment variables should be set before starting server
+
+# Admin user name ( used for admin login for blog creation)
+USERNAME
+
+# Admin password ( used for admin login)
+PASSWORD
+
+# AWS Bucket name used for storing static files e.g. blog data ( should be different for development and production)
+AWS_BUCKET_NAME
+
+# AWS secret access key ( used for storing static content to AWS S3)
+# This user should have read/write access to AWS Bucket
+AWS_SECRET_ACCESS_KEY
+
+# AWS access key id
+AWS_ACCESS_KEY_ID
+
+# AWS region
+AWS_REGION
