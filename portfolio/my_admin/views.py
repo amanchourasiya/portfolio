@@ -46,6 +46,7 @@ def save_blog(request):
         editor_data=json.loads(request.body)
         title=editor_data['blocks'][0]['data']['text']
         title=title.replace(":","")
+        title=title.replace(".","_")
 
         title=re.sub(r"\s+",'_',title)
         date=datetime.date.today()
