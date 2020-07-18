@@ -54,6 +54,7 @@ def create_html(title,blocks, path='blog/templates/blog/'):
                          </ul>
                       </div>
                       <h6 class="text-center">'''+block.get('date',blog_default_date)+'''</h6><br>
+                      <div id="pageViews"><h6>page views</h6></div>
                      '''
               
             else:

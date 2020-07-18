@@ -25,6 +25,6 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('port/', include('port.urls')),
     path('my_admin/', include('my_admin.urls')),
-    path('api/v1/image', include('apiserver.urls')),
-    url(r'^my_admin/add_blog/api/v1/image',include('apiserver.urls')),
+    path('api/v1/', include('apiserver.urls')),
+    #url(r'^my_admin/add_blog/api/v1/image',include('apiserver.urls')),
 ]

@@ -13395,7 +13395,7 @@ const editor= new EditorJS(
       class: ImageTool,
       config: {
         endpoints: {
-          byFile: 'api/v1/image', // Your backend file uploader endpoint
+          byFile: '/api/v1/image', // Your backend file uploader endpoint
           byUrl: window.location.hostname + '/fetchUrl', // Your endpoint that provides uploading by Url
         }
       }
@@ -13418,15 +13418,7 @@ function onSaveBlog(){
    url=JSON.parse(xhr.responseText);
   window.location.href = 'http://' + window.location.hostname + '/blog/'+url;
   }
-  xhr.send(json_string);
-  
-  
-  
-  
-  
-
- 
-  
+  xhr.send(json_string);  
 }).catch((error) => {
   console.log('Saving failed: ', error)
 });
