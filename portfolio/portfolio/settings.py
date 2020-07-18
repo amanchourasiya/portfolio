@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'blog',
     'port',
     'my_admin',
+    'apiserver',
+    'index',
 ]
 
 MIDDLEWARE = [

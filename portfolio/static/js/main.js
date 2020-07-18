@@ -36,7 +36,7 @@ function getPageViews(blogName){
 		console.log(data);
 		pageViews = data["blog_views"];
 		console.log(pageViews);
-		$('#pageViews').html("<h1>"+ pageViews+ "<\h1>");
+		$('#page-views').html(pageViews);
 	});
 	// Change page views
 	//window.alert(pageViews);
