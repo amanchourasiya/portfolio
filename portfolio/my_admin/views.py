@@ -13,7 +13,6 @@ def login(request):
     return render(request, 'my_admin.html', {})
 
 def check(request):
-    print(" fun")
     if request.method=="POST":
         username=request.POST.get('username')
         password=request.POST.get('password')
@@ -27,8 +26,6 @@ def check(request):
             return render(request,'my_admin.html',{})
 
 def add_blog(request):
-    
-   
     if request.session.has_key('username'):
         return render(request,'add_blog.html',{})
         
@@ -42,22 +39,38 @@ def logout(request):
 @csrf_exempt
 def save_blog(request):
     if request.method=="POST":
-        
         editor_data=json.loads(request.body)
         title=editor_data['blocks'][0]['data']['text']
-        title=title.replace(":","")
-        title=title.replace(".","_")
+        title = process_title(title)
 
-        title=re.sub(r"\s+",'_',title)
-        date=datetime.date.today()
-        date=date.strftime("%d %B %Y")
-        editor_data['blocks'][0].update({'date':date})
+        process_date(editor_data)
 
-        blog_card_data={title:editor_data}
-        print(editor_data)
         save_cards(title,editor_data['blocks'])
         create_html(title,editor_data['blocks'])
-        print("Html created successfully")
         link=title
         return JsonResponse(link,safe=False)
    
+def preview_blog(request):
+    editor_data = json.loads(request.body)
+    title = editor_data['blocks'][0]['data']['text']
+    title = process_title(title)
+
+    process_date(editor_data)
+    save_cards(title,editor_data['blocks'])
+    create_html(title,editor_data['blocks'])
+    link=title
+    return JsonResponse(link,safe=False)
+
+
+# Utility methods
+
+def process_title(title):
+    title=title.replace(":","")
+    title=title.replace(".","_")
+    title=re.sub(r"\s+",'_',title)
+    return title
+
+def process_date(editor_data):
+    date=datetime.date.today()
+    date=date.strftime("%d %B %Y")
+    editor_data['blocks'][0].update({'date':date})
