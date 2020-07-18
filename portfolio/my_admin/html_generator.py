@@ -49,6 +49,7 @@ def create_html(title,blocks, path='blog/templates/blog/'):
                                 document.getElementById('redId').href=reddit_share_api+current_location
                            </script>
                            </li>
+                           <li id="page-views" class="fa fa-eye " style="float: right;margin-top: 10px;">0</li>
                           
                           
                          </ul>
