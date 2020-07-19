@@ -5,7 +5,7 @@ import os
 def save_blog(request,title): 
    return render(request,"blog/" + title + ".html")
 
-def prevew(request, title):
+def preview(request, title):
     return render(request, 'blog/tmp/' + title + '.html')
 
 def blog(request):
