@@ -1,44 +1,47 @@
-{% load static%}    
+{% load static%}
+
 <head>
-  
-   <meta charset="utf-8">
-	<meta name="google-site-verification" content="UWZvQZ1V61UOV7vRiEO4B6fw5zSG564goDnTUq5j450" />
+
+  <meta charset="utf-8">
+  <meta name="google-site-verification" content="UWZvQZ1V61UOV7vRiEO4B6fw5zSG564goDnTUq5j450" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
- 
+
   <link rel="stylesheet" href="{%static 'css/owl.carousel.min.css'%}">
   <link rel="stylesheet" href="{%static 'css/owl.theme.default.min.css'%}">
   <link rel="stylesheet" href="{%static 'css/animate.css'%}">
   <link rel="stylesheet" href="{%static 'css/style.css'%}">
   <link rel="icon" href="{%static 'img/logo.png'%}" type="image/icon type">
-  
-    </head>
-	
-<body>	
 
-<nav class="navbar navbar-expand-md navbar-dark fixed-top " style="    background-color: #000000fc;">
-  <a class="navbar-brand" href="/"><img class="img-fluid" src="{% static 'img/logo.png' %}" width="60px; height:20px;"></a>
-  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link " href="/"><i class="fa fa-fw fa-home"></i>Home</a>
-      </li>
-      <li class="nav-item ">
-        <a  href={%url 'blog'%} class="nav-link"><i class="fab fa-blogger-b"></i>log</a>
-      </li>
-      <li class="nav-item">
-        <a  href={%url 'port'%} class="nav-link" > <i class="fa fa-user"></i>Portfolio</a>
-      </li>    
-	  <!-- <li class="nav-item" >
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="    background-color: #000000fc;">
+    <a class="navbar-brand" href="/"><img class="img-fluid" src="{% static 'img/logo.png' %}"
+        width="60px; height:20px;"></a>
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link " href="/"><i class="fa fa-fw fa-home"></i>Home</a>
+        </li>
+        <li class="nav-item ">
+          <a href={%url 'blog'%} class="nav-link"><i class="fab fa-blogger-b"></i>log</a>
+        </li>
+        <li class="nav-item">
+          <a href={%url 'port'%} class="nav-link"> <i class="fa fa-user"></i>Portfolio</a>
+        </li>
+        <!-- <li class="nav-item" >
         <a   class="nav-link" href="#"><i class="fa fa-pencil-square-o"></i>Post</a>
       </li> 
 	  -->
+<<<<<<< HEAD
 	 {% block navbar %}
 	  {% endblock %}
     </ul>
@@ -47,12 +50,22 @@
 	
 {% block page_content %}
 {% endblock %}
+=======
+        {% block navbar %}
+        {% endblock %}
+      </ul>
+    </div>
+  </nav>
 
-<!-- Footer -->
-<footer class="page-footer font-small text-white " style="    background-color: #000000fc;">
+  {% block page_content %}
+  {% endblock %}
 
-  <!-- Footer Elements -->
-  
+  <!-- Footer -->
+  <footer class="page-footer font-small text-white " style="    background-color: #000000fc;">
+>>>>>>> 6291810b206c150ab06e937bdd9cb07c9075d393
+
+    <!-- Footer Elements -->
+
 
     <!-- Grid row-->
     <div class="text-center">
@@ -60,9 +73,9 @@
       <!-- Grid column -->
       <div class="col-md-12 pt-5 pb-0">
         <div class="mb-4 flex-center">
- <!--Linkedin -->
+          <!--Linkedin -->
           <a class="li-ic" href="https://in.linkedin.com/in/aman-chourasiya">
-            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"style="color:white"> </i>
+            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x" style="color:white"> </i>
           </a>
           <!-- Facebook -->
           <a class="fb-ic" href="https://www.fb.com/aman.chourasia.35">
@@ -70,26 +83,23 @@
           </a>
           <!-- Twitter -->
           <a class="tw-ic" href="https://twitter.com/techieaman">
-            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"style="color:white"> </i>
+            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x" style="color:white"> </i>
           </a>
           <!-- Google +-->
-         
-        
+
+
           <!--Instagram-->
           <a class="ins-ic" href="https://www.instagram.com/techie_aman/">
-            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"style="color:white"> </i>
+            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x" style="color:white"> </i>
           </a>
           <!--Pinterest-->
-          
+
         </div>
       </div>
       <!-- Grid column -->
 
-    
-    <!-- Grid row-->
 
-  </div>
-  <!-- Footer Elements -->
+      <!-- Grid row-->
 
   <!-- Copyright -->
   <p class="text-center " style="color:white">Contact me for any queries</p>
@@ -98,13 +108,12 @@
   </div>
   <!-- Copyright -->
 
-</footer>
 
+  </footer>
 
-	  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="{%static 'js/owl.carousel.min.js'%}"></script>
-   <script src="{%static 'js/main.js'%}"></script>
+  <script src="{%static 'js/main.js'%}"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 </body>

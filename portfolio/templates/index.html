@@ -1,39 +1,40 @@
 {% extends "base.html" %}
-{% load static%} 
+{% load static%}
 {% block page_content %}
 
- <main>
-  <section  style="background:url('{% static 'img/code11.jpg' %}');-webkit-background-size:cover;-moz-background-size:cover;height:110vh;no-repeat center center fixed;display: flex;justify-content:center;margin-top:0px;">
-   <div class="site-background">
-     <h3 class="site-title animated bounce ">Techie Aman</h3>
-     <h1 class="site-title2 animated zoomIn" > Enough Talk Show Me The Co$e</h1>
-	 <a href={%url 'blog'%}><button   class="site-btn animated zoomIn">Explore</button></a>
-   
-   </div>
-  
-</section>
-  
-  <section  style="backgroud-color:white;background-repeat:no-repeat;background-position:right;width:100%;">
-<h1 class="text-center head-corousal  mt-5">Recent Blogs</h1>  
-  <div class="container-owl mb-5">
-     <div class="owl-carousel owl-theme blog-post">
-	 {{ forloop.counter }}
-	{% for key,value in data.items %}
-	  
-	    {% if forloop.counter < 7 %}
-	 <div class="blog-content">
-         <img  src={{value.1.data.file.url}} style="width:100%;" height="150" alt="Card image cap"/>
-         <div class="blog-title">
-          <h3 style="    color: black;font-weight: 500;">{{value.0.data.text|truncatechars:34}}</h3>
-	      <p style="color: #000000;font-weight: 400;">{{value.2.data.text|truncatechars:100}}</p>
-           <p id="test"><a  href={%url 'blog'%}{{key}} class="read-more-btn">Read more</a></p>
-           		   
-         </div>
-       </div>
-	   {% endif %}
-	{% endfor %}
-	   </div>
-	  </div>
-	</section>
-  </main>
+<main>
+  <section
+    style="background:url('{% static 'img/code11.jpg' %}');-webkit-background-size:cover;-moz-background-size:cover;height:110vh;no-repeat center center fixed;display: flex;justify-content:center;margin-top:0px;">
+    <div class="site-background">
+      <h3 class="site-title animated bounce ">Techie Aman</h3>
+      <h1 class="site-title2 animated zoomIn"> Enough Talk Show Me The Co$e</h1>
+      <a href={%url 'blog'%}><button class="site-btn animated zoomIn">Explore</button></a>
+
+    </div>
+
+  </section>
+
+  <section style="backgroud-color:white;background-repeat:no-repeat;background-position:right;width:100%;">
+    <h1 class="text-center head-corousal  mt-5">Recent Blogs</h1>
+    <div class="container-owl mb-5">
+      <div class="owl-carousel owl-theme blog-post">
+        {{ forloop.counter }}
+        {% for key,value in data.items %}
+
+        {% if forloop.counter < 7 %}
+        <div class="blog-content">
+          <img src={{value.1.data.file.url}} style="width:100%;" height="150" alt="Card image cap" />
+          <div class="blog-title">
+            <h3 style="    color: black;font-weight: 500;">{{value.0.data.text|truncatechars:34}}</h3>
+            <p style="color: #000000;font-weight: 400;">{{value.2.data.text|truncatechars:100}}</p>
+            <p id="test"><a href={%url 'blog'%}{{key}} class="read-more-btn">Read more</a></p>
+
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</main>
 {% endblock %}
