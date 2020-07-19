@@ -3,6 +3,5 @@ from index import views
 
 urlpatterns = [
     path('', views.index, name='index'),
- 
+
 ]
- 
