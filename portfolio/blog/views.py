@@ -2,6 +2,8 @@ from django.shortcuts import render
 import json
 import os
 
+def add_blog(request,title):
+    return render(request,"blog/"+title+".html")
 
 def save_blog(request, title):
     return render(request, "blog/" + title + ".html")

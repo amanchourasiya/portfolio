@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import whitenoise
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -41,6 +42,8 @@ INSTALLED_APPS = [
     'blog',
     'port',
     'my_admin',
+    'apiserver',
+    'index',
 ]
 
 MIDDLEWARE = [
@@ -81,7 +84,7 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     import dj_database_url
-    DATABASES = {'default': dj_database_url.config()}
+    DATABASES = {'default': dj_database_url.config(conn_max_age=600, ssl_require=False)}
 else:
     DATABASES = {
         'default': {
@@ -132,3 +135,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
+# Activate Django-Heroku.
+#django_heroku.settings(locals())
