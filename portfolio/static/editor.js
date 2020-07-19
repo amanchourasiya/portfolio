@@ -13432,7 +13432,7 @@ function onPreviewBlog(){
   xhr.setRequestHeader('Content-Type','application/json');
   xhr.onload= () =>{
    url=JSON.parse(xhr.responseText);
-  window.location.href = 'http://' + window.location.hostname + '/blog/'+url;
+  window.open('http://' + window.location.hostname + '/blog/'+url,"_blank") ;
   }
   xhr.send(json_string); 
 }).catch((error) => {

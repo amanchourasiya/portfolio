@@ -49,7 +49,8 @@ def save_blog(request):
         create_html(title,editor_data['blocks'])
         link=title
         return JsonResponse(link,safe=False)
-   
+
+@csrf_exempt
 def preview_blog(request):
     editor_data = json.loads(request.body)
     title = editor_data['blocks'][0]['data']['text']

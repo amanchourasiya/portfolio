@@ -124,7 +124,11 @@ def generate_blogs():
         
 def check_prerequisites():
     # Check for necessary directory
-    required_dir = ['portfolio/static/blog-images','portfolio/blog/templates/blog']
+    required_dir = [
+        'portfolio/static/blog-images',
+        'portfolio/blog/templates/blog',
+        'portfolio/blog/templates/blog/tmp'
+        ]
     
     for dir in required_dir:
         if not os.path.exists(dir):
