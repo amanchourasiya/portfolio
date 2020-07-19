@@ -26,6 +26,14 @@ def create_html(title, blocks, path='blog/templates/blog/'):
                       <h1 id="blog-title" class="text-center head-blog" style="margin-top:70px;">'''+block['data']['text']+'''</h1>
                       <div class="post-socialIcons">
                          <ul>
+                           <li class="socialIcons-links socialIcons-links-linkedin">
+                            <a id="linkedId" class="fa fa-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=" target="_blank"></a>
+                             <script>
+                                var reddit_share_api=document.getElementById('linkedId').href
+                                var current_location=window.location.href
+                                document.getElementById('linkedId').href=reddit_share_api+current_location
+                             </script>
+                           </li>
                            <li class="socialIcons-links socialIcons-links-twitter">
                            <a id="twiId" class="fa fa-twitter" href="https://twitter.com/share?url=" target="_blank"></a>
                            <script>
@@ -63,7 +71,7 @@ def create_html(title, blocks, path='blog/templates/blog/'):
                           
                          </ul>
                       </div>
-                      <h6 class="text-center">'''+block.get('date', blog_default_date)+'''</h6><br>
+                      <h6 class="text-center" style="margin-right:50px;">'''+block.get('date', blog_default_date)+'''</h6><br>
                      '''
 
             else:
