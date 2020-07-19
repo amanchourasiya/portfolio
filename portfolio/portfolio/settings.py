@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     import dj_database_url
-    DATABASES = {'default': dj_database_url.config()}
+    DATABASES = {'default': dj_database_url.config(conn_max_age=600, ssl_require=False)}
 else:
     DATABASES = {
         'default': {
@@ -137,4 +137,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # Activate Django-Heroku.
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
