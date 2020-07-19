@@ -20,6 +20,7 @@ $(document).ready(function () {
 		responsive:responsive,
 		});
 		checkBlogViews();	
+		updateMetaTags();
 });
 
 function checkBlogViews(){
@@ -45,4 +46,16 @@ function getPageViews(blogName){
 
 function incrementPageViews(blogName){
 	$.post('/api/v1/incrementviews', {'blog_name': blogName});
+};
+
+function updateMetaTags(){
+	// Updating og tags
+	$('meta[property="og:title"]').content = $('#blog-title').text();
+	$('meta[property="og:description"]') = $('#blog-description').text();
+	$('meta[property="og:url"]') = window.location.href;
+
+	// updating twitter tags
+	$('meta[name="twitter:title"]').content = $('#blog-title').text();
+	$('meta[name="twitter:description"]').content = $('#blog-description').text();
+	$('meta[name="twitter:url"]').content = window.location.href;
 };

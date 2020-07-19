@@ -69,7 +69,7 @@ def create_html(title, blocks, path='blog/templates/blog/'):
             else:
                 if block['data']['level'] == 2:
                     header = '''
-                      <h1 class="head-blog" style=" margin-top:40px;">'''+block['data']['text']+'''</h1>
+                      <h1 id="blog-title" class="head-blog" style=" margin-top:40px;">'''+block['data']['text']+'''</h1>
                      '''
                 elif block['data']['level'] == 3:
                     header = '''
@@ -85,7 +85,7 @@ def create_html(title, blocks, path='blog/templates/blog/'):
             if flag == 0:
                 paragraph = '''
                     <div class="para-desc-blog">
-                    <p ><span class="blog-first-char">'''+block['data']['text'][0]+'''</span>'''+block['data']['text'][1:-1]+'''</p>
+                    <p id="blog-description"><span class="blog-first-char">'''+block['data']['text'][0]+'''</span>'''+block['data']['text'][1:-1]+'''</p>
                     </div>
                     
             '''
