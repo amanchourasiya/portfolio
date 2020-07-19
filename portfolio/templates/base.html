@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 {% load static%}
 
 <head>
@@ -14,7 +16,7 @@
   <link rel="stylesheet" href="{%static 'css/owl.theme.default.min.css'%}">
   <link rel="stylesheet" href="{%static 'css/animate.css'%}">
   <link rel="stylesheet" href="{%static 'css/style.css'%}">
-  <link rel="icon" href="{%static 'img/logo.png'%}" type="image/icon type">
+  <link rel="icon" href="{%static 'img/logo.png'%}" type="image/icon">
 
 </head>
 
@@ -22,7 +24,7 @@
 
   <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="    background-color: #000000fc;">
     <a class="navbar-brand" href="/"><img class="img-fluid" src="{% static 'img/logo.png' %}"
-        width="60px; height:20px;"></a>
+        alt="logo" width="60px;" height="20px;"></a>
     <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -49,7 +51,8 @@
 
   {% block page_content %}
   {% endblock %}
-
+   
+</body>
   <!-- Footer -->
   <footer class="page-footer font-small text-white " style="    background-color: #000000fc;">
 
@@ -86,7 +89,7 @@
         </div>
       </div>
       <!-- Grid column -->
-
+    </div>
 
       <!-- Grid row-->
 
@@ -105,4 +108,4 @@
   <script src="{%static 'js/main.js'%}"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-</body>
+</html>
