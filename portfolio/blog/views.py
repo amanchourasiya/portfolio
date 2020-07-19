@@ -19,8 +19,4 @@ def blog(request):
     with open("static/blog-cards.json", "r") as fileobj:
         data = json.load(fileobj)
 
-<<<<<<< HEAD
-    return render(request,"blog.html",{'data':data})
-=======
     return render(request, "blog.html", {'data': data})
->>>>>>> 6291810b206c150ab06e937bdd9cb07c9075d393
