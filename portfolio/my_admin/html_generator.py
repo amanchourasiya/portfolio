@@ -23,7 +23,7 @@ def create_html(title, blocks, path='blog/templates/blog/'):
             if header_flag == 0:
 
                 header = '''
-                      <h1 class="text-center head-blog" style="margin-top:70px;">'''+block['data']['text']+'''</h1>
+                      <h1 id="blog-title" class="text-center head-blog" style="margin-top:70px;">'''+block['data']['text']+'''</h1>
                       <div class="post-socialIcons">
                          <ul>
                            <li class="socialIcons-links socialIcons-links-twitter">
@@ -69,7 +69,7 @@ def create_html(title, blocks, path='blog/templates/blog/'):
             else:
                 if block['data']['level'] == 2:
                     header = '''
-                      <h1 id="blog-title" class="head-blog" style=" margin-top:40px;">'''+block['data']['text']+'''</h1>
+                      <h1 class="head-blog" style=" margin-top:40px;">'''+block['data']['text']+'''</h1>
                      '''
                 elif block['data']['level'] == 3:
                     header = '''
