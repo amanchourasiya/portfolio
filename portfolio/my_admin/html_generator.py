@@ -16,8 +16,8 @@ def create_html(title, blocks, path='blog/templates/blog/'):
     '''
 
     fileobj.write(navbar)
-    blog_structure = '''<div container-fluid class="blog" >'''
-    #fileobj.write(blog_structure)
+    blog_structure = '''<div class="blog" >'''
+    fileobj.write(blog_structure)
     for block in blocks:
         if block['type'] == 'header':
             if header_flag == 0:
