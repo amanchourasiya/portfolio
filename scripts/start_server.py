@@ -7,13 +7,13 @@ and start server after running some pre checks.
 This will setup config based on development/production environment
 '''
 
-from html_generator import create_html
 import sys
 import os
 import json
 import boto3
 
 sys.path.append(os.getcwd() + '/portfolio/my_admin')
+from html_generator import create_html
 
 
 def usage():
