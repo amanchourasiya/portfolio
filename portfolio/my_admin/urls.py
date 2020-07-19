@@ -7,4 +7,5 @@ urlpatterns = [
     path('add_blog/', views.add_blog, name='add_blog'),
     path('logout/', views.logout, name='logout'),
     path('add_blog/blog_req/', views.save_blog, name='blog_req'),
+    path('add_blog/preview_blog/', views.preview_blog, name='preview_req'),
 ]

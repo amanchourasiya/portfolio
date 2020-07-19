@@ -56,11 +56,9 @@ def preview_blog(request):
     title = process_title(title)
 
     process_date(editor_data)
-    save_cards(title,editor_data['blocks'])
-    create_html(title,editor_data['blocks'])
-    link=title
+    create_html(title,editor_data['blocks'], path='blog/templates/blog/tmp/')
+    link = 'tmp/' + title
     return JsonResponse(link,safe=False)
-
 
 # Utility methods
 

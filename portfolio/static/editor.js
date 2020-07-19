@@ -13418,16 +13418,24 @@ function onSaveBlog(){
    url=JSON.parse(xhr.responseText);
   window.location.href = 'http://' + window.location.hostname + '/blog/'+url;
   }
-  xhr.send(json_string);
-  
-  
-  
-  
-  
-
- 
-  
+  xhr.send(json_string); 
 }).catch((error) => {
   console.log('Saving failed: ', error)
 });
-}
+};
+
+function onPreviewBlog(){
+	editor.save().then((outputData) => {
+  json_string=JSON.stringify(outputData);
+  const xhr= new XMLHttpRequest();
+  xhr.open('POST','preview_req/');
+  xhr.setRequestHeader('Content-Type','application/json');
+  xhr.onload= () =>{
+   url=JSON.parse(xhr.responseText);
+  window.location.href = 'http://' + window.location.hostname + '/blog/'+url;
+  }
+  xhr.send(json_string); 
+}).catch((error) => {
+  console.log('Saving failed: ', error)
+});
+};
