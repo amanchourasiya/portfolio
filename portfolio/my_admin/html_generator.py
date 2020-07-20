@@ -63,7 +63,7 @@ def create_html(title, blocks, path='blog/templates/blog/'):
                           
                          </ul>
                       </div>
-                      <h6 class="text-center" style="margin-right:50px;">'''+block.get('date', blog_default_date)+'''</h6><br>
+                      <h6 class="text-center" style="margin-right:10px;">'''+block.get('date', blog_default_date)+'''</h6><br>
                      '''
 
             else:
