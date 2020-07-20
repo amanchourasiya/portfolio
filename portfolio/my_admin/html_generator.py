@@ -50,14 +50,6 @@ def create_html(title, blocks, path='blog/templates/blog/'):
                                 document.getElementById('fbId').href=reddit_share_api+current_location
                            </script>
                            </li>
-                           <li class="socialIcons-links socialIcons-links-facebook">
-                           <a id="fbId" class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank"></a>
-                           <script>
-                                var reddit_share_api=document.getElementById('fbId').href
-                                var current_location=window.location.href
-                                document.getElementById('fbId').href=reddit_share_api+current_location
-                           </script>
-                           </li>
                             <li class="socialIcons-links socialIcons-links-reddit">
                            <a id="redId" class="fa fa-reddit-alien" href="https://reddit.com/submit?url=" target="_blank"></a>
                            <script>
