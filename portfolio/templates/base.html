@@ -51,13 +51,13 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link " href="/"><i class="fa fa-fw fa-home"></i>Home</a>
+          <a class="nav-link {% block nav_item_home %}{% endblock nav_item_home %}" href="/"><i class="fa fa-fw fa-home"></i>Home</a>
         </li>
         <li class="nav-item ">
-          <a href={%url 'blog'%} class="nav-link"><i class="fab fa-blogger-b"></i>log</a>
+          <a href={%url 'blog'%} class="nav-link {% block nav_item_blog %}{% endblock nav_item_blog %}"><i class="fab fa-blogger-b"></i>log</a>
         </li>
         <li class="nav-item">
-          <a href={%url 'port'%} class="nav-link"> <i class="fa fa-user"></i>Portfolio</a>
+          <a href={%url 'port'%} class="nav-link {% block nav_item_port %}{% endblock nav_item_port %}"> <i class="fa fa-user"></i>Portfolio</a>
         </li>
         <!-- <li class="nav-item" >
         <a   class="nav-link" href="#"><i class="fa fa-pencil-square-o"></i>Post</a>
