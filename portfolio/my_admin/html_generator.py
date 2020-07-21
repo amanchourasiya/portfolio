@@ -24,7 +24,7 @@ def create_html(title, blocks, path='blog/templates/blog/'):
 <meta property="og:image" content="'''+blocks[1]['data']['file']['url']+'''" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="675" />
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary_card_image" />
 <meta name="twitter:title" content="Aman Chourasiya" />
 <meta name="twitter:description" content="'''+blocks[2]['data']['text']+'''" />
 <meta name="twitter:url" content="https://www.amanchourasiya.com/blog/'''+title+'''/" />
