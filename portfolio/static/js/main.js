@@ -20,7 +20,7 @@ $(document).ready(function () {
 		responsive:responsive,
 		});
 		checkBlogViews();	
-		updateMetaTags();
+		//updateMetaTags();
 });
 
 function checkBlogViews(){
