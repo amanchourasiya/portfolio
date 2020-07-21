@@ -1,20 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
 {% load static%}
 
 <head>
 
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <meta name="google-site-verification" content="UWZvQZ1V61UOV7vRiEO4B6fw5zSG564goDnTUq5j450" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta property="og:site_name" content="Aman Chourasiya" />
+  <meta property="og:title" content="Aman Chourasiya" >
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="Interesting articles related to technology" />
+  <meta property="og:url" content="https://www.amanchourasiya.com" />
+  <meta property="og:image" content="https://www.amanchourasiya.com/static/img/code9.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="675" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Aman Chourasiya" />
+  <meta name="twitter:description" content="Interesting articles related to technology" />
+  <meta name="twitter:url" content="https://www.amanchourasiya.com" />
+  <meta name="twitter:image" content="https://www.amanchourasiya.com/static/img/code9.jpg" />
+  <meta name="twitter:label1" content="Written by" />
+  <meta name="twitter:data1" content="Aman Chourasiya" />
+  <meta name="twitter:label2" content="Filed under" />
+  <meta name="twitter:data2" content="Blog" />
+  <meta name="twitter:site" content="@techieaman" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
   <link rel="stylesheet" href="{%static 'css/owl.carousel.min.css'%}">
   <link rel="stylesheet" href="{%static 'css/owl.theme.default.min.css'%}">
   <link rel="stylesheet" href="{%static 'css/animate.css'%}">
   <link rel="stylesheet" href="{%static 'css/style.css'%}">
-  <link rel="icon" href="{%static 'img/logo.png'%}" type="image/icon type">
+  <link rel="icon" href="{%static 'img/logo.png'%}" type="image/icon">
 
 </head>
 
@@ -22,7 +44,7 @@
 
   <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="    background-color: #000000fc;">
     <a class="navbar-brand" href="/"><img class="img-fluid" src="{% static 'img/logo.png' %}"
-        width="60px; height:20px;"></a>
+        alt="logo" width="60;" height="20;"></a>
     <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -49,9 +71,10 @@
 
   {% block page_content %}
   {% endblock %}
-
+   
+</body>
   <!-- Footer -->
-  <footer class="page-footer font-small text-white " style="    background-color: #000000fc;">
+  <footer class="page-footer font-small text-white "   style="background-color: #000000fc;">
 
     <!-- Footer Elements -->
 
@@ -86,7 +109,7 @@
         </div>
       </div>
       <!-- Grid column -->
-
+    </div>
 
       <!-- Grid row-->
 
@@ -105,4 +128,4 @@
   <script src="{%static 'js/main.js'%}"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-</body>
+</html>

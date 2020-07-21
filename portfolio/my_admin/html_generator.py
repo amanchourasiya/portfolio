@@ -16,30 +16,30 @@ def create_html(title, blocks, path='blog/templates/blog/'):
     '''
 
     fileobj.write(navbar)
-    blog_structure = '''<div container-fluid class="blog" >'''
+    blog_structure = '''<div class="blog" >'''
     fileobj.write(blog_structure)
     for block in blocks:
         if block['type'] == 'header':
             if header_flag == 0:
 
                 header = '''
-                      <h1 class="text-center head-blog" style="margin-top:70px;">'''+block['data']['text']+'''</h1>
+                      <h1 id="blog-title" class="text-center head-blog" style="margin-top:70px;">'''+block['data']['text']+'''</h1>
                       <div class="post-socialIcons">
                          <ul>
+                           <li class="socialIcons-links socialIcons-links-linkedin">
+                            <a id="linkedId" class="fa fa-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=" target="_blank"></a>
+                             <script>
+                                var reddit_share_api=document.getElementById('linkedId').href
+                                var current_location=window.location.href
+                                document.getElementById('linkedId').href=reddit_share_api+current_location
+                             </script>
+                           </li>
                            <li class="socialIcons-links socialIcons-links-twitter">
                            <a id="twiId" class="fa fa-twitter" href="https://twitter.com/share?url=" target="_blank"></a>
                            <script>
                                 var reddit_share_api=document.getElementById('twiId').href
                                 var current_location=window.location.href
                                 document.getElementById('twiId').href=reddit_share_api+current_location
-                           </script>
-                           </li>
-                           <li class="socialIcons-links socialIcons-links-facebook">
-                           <a id="fbId" class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank"></a>
-                           <script>
-                                var reddit_share_api=document.getElementById('fbId').href
-                                var current_location=window.location.href
-                                document.getElementById('fbId').href=reddit_share_api+current_location
                            </script>
                            </li>
                            <li class="socialIcons-links socialIcons-links-facebook">
@@ -63,7 +63,7 @@ def create_html(title, blocks, path='blog/templates/blog/'):
                           
                          </ul>
                       </div>
-                      <h6 class="text-center">'''+block.get('date', blog_default_date)+'''</h6><br>
+                      <h6 class="text-center" style="margin-right:10px;">'''+block.get('date', blog_default_date)+'''</h6><br>
                      '''
 
             else:
@@ -85,7 +85,7 @@ def create_html(title, blocks, path='blog/templates/blog/'):
             if flag == 0:
                 paragraph = '''
                     <div class="para-desc-blog">
-                    <p ><span class="blog-first-char">'''+block['data']['text'][0]+'''</span>'''+block['data']['text'][1:-1]+'''</p>
+                    <p id="blog-description"><span class="blog-first-char">'''+block['data']['text'][0]+'''</span>'''+block['data']['text'][1:-1]+'''</p>
                     </div>
                     
             '''
