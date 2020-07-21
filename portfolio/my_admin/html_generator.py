@@ -20,7 +20,7 @@ def create_html(title, blocks, path='blog/templates/blog/'):
 <meta property="og:title" content="'''+blocks[0]['data']['text']+'''" />
 <meta property="og:type" content="article" />
 <meta property="og:description" content="'''+blocks[2]['data']['text']+'''" />
-<meta property="og:url" content="https://www.amanchourasiya.com" />
+<meta property="og:url" content="https://www.amanchourasiya.com/blog'''+title+'''" />
 <meta property="og:image" content="https://www.amanchourasiya.com'''+blocks[1]['data']['file']['url']+'''" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="675" />
