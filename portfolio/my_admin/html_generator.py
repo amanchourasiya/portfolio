@@ -8,14 +8,65 @@ def create_html(title, blocks, path='blog/templates/blog/'):
 
     header_flag = 0
     fileobj = open(path + title + ".html", "w+")
-    navbar = '''
+    header='''
 
-    {% extends "base.html" %}
-    {% load static%} 
-    {% block page_content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="google-site-verification" content="UWZvQZ1V61UOV7vRiEO4B6fw5zSG564goDnTUq5j450" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:site_name" content="Aman Chourasiya" />
+<meta property="og:title" content="'''+blocks[0]['data']['text']+'''">
+<meta property="og:type" content="article" />
+<meta property="og:description" content="'''+blocks[2]['data']['text']+'''" />
+<meta property="og:url" content="https://www.amanchourasiya.com" />
+<meta property="og:image" content="https://www.amanchourasiya.com'''+blocks[1]['data']['file']['url']+'''" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="675" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Aman Chourasiya" />
+<meta name="twitter:description" content="'''+blocks[2]['data']['text']+'''" />
+<meta name="twitter:url" content="https://www.amanchourasiya.com" />
+<meta name="twitter:image" content="https://www.amanchourasiya.com'''+blocks[1]['data']['file']['url']+'''" />
+<meta name="twitter:label1" content="Written by" />
+<meta name="twitter:data1" content="'''+blocks[0]['data']['text']+'''" />
+<meta name="twitter:label2" content="Filed under" />
+<meta name="twitter:data2" content="Blog" />
+<meta name="twitter:site" content="@techieaman" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link rel="stylesheet" href="/static/css/owl.carousel.min.css">
+<link rel="stylesheet" href="/static/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="/static/css/animate.css">
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="icon" href="/static/img/logo.png" type="image/icon">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top " style="    background-color: #000000fc;">
+<a class="navbar-brand" href="/"><img class="img-fluid" src="/static/img/logo.png" alt="logo" width="60;" height="20;"></a>
+<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="collapsibleNavbar">
+<ul class="navbar-nav ml-auto">
+<li class="nav-item">
+<a class="nav-link " href="/"><i class="fa fa-fw fa-home"></i>Home</a>
+</li>
+<li class="nav-item ">
+<a href=/blog/ class="nav-link"><i class="fab fa-blogger-b"></i>log</a>
+</li>
+<li class="nav-item">
+<a href=/port/ class="nav-link"> <i class="fa fa-user"></i>Portfolio</a>
+</li>
+
+</ul>
+</div>
+</nav>
     '''
 
-    fileobj.write(navbar)
+    fileobj.write(header)
     blog_structure = '''<div class="blog" >'''
     fileobj.write(blog_structure)
     for block in blocks:
@@ -146,7 +197,50 @@ def create_html(title, blocks, path='blog/templates/blog/'):
 
     footer = '''
 
-              {% endblock %}
+                  </body>
+
+            <footer class="page-footer font-small text-white " style="background-color: #000000fc;">
+
+
+<div class="text-center">
+
+<div class="col-md-12 pt-5 pb-0">
+<div class="mb-4 flex-center">
+
+<a class="li-ic" href="https://in.linkedin.com/in/aman-chourasiya">
+<i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x" style="color:white"> </i>
+</a>
+
+<a class="fb-ic" href="https://www.fb.com/aman.chourasia.35">
+<i class="fab fa-facebook-f fa-lg  mr-md-5 mr-3 fa-2x" style="color:white"> </i>
+</a>
+
+<a class="tw-ic" href="https://twitter.com/techieaman">
+<i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x" style="color:white"> </i>
+</a>
+
+
+<a class="ins-ic" href="https://www.instagram.com/techie_aman/">
+<i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x" style="color:white"> </i>
+</a>
+
+</div>
+</div>
+
+</div>
+
+
+<p class="text-center " style="color:white">Contact me for any queries</p>
+<div class="footer-copyright text-center pt-1" style="color:white">2020 Copyright:
+<a href="https://mdbootstrap.com/"> Chourasiya Brothers</a>
+</div>
+
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/static/js/owl.carousel.min.js"></script>
+<script src="/static/js/main.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</html>
 
            '''
     fileobj.write(footer)
