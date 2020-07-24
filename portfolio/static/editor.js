@@ -13411,7 +13411,7 @@ const editor = new EditorJS(
                 class: ImageTool,
                 config: {
                     endpoints: {
-                        byFile: 'api/v1/image', // Your backend file uploader endpoint
+                        byFile: '/api/v1/image', // Your backend file uploader endpoint
                         byUrl: window.location.hostname + '/fetchUrl', // Your endpoint that provides uploading by Url
                     }
                 }

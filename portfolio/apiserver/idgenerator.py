@@ -21,4 +21,4 @@ def getID():
 
         fileobj.close()
 
-    return 'image-' + idi
+    return 'image-' + str(idi)
