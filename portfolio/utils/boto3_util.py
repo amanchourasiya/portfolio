@@ -4,7 +4,8 @@ import os
 
 bucket_name = os.environ.get('AWS_BUCKET_NAME', '')
 region = os.environ.get('AWS_REGION', '')
-image_url = 'https://' + bucket_name + '.s3.' + region + '.amazonaws.com/'
+#image_url = 'https://' + bucket_name + '.s3.' + region + '.amazonaws.com/'
+image_url = 'https://ik.imagekit.io/portfolio/'
 
 
 def get_s3():
@@ -61,4 +62,4 @@ def upload_image(image_name, image_key):
     s3.meta.client.upload_file(Bucket=bucket_name,
                                Filename=image_name,
                                Key=key)
-    return image_url + 'blog-images/' + image_key
+    return image_url + image_key
