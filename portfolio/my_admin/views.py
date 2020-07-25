@@ -73,9 +73,9 @@ def preview_blog(request):
 
 
 def process_title(title):
-    title = title.replace(":", "")
-    title = title.replace(".", "_")
-    title = re.sub(r"\s+", '_', title)
+    for c in title:
+        if not c.isalnum():
+            title = title.replace(c, '_')
     return title
 
 
