@@ -1,21 +1,23 @@
-PORTFOLIO
-This is a personal blogging Django Application , currently deployed at https://www.amanchourasiya.com .
-![Image of homepage](www.amanchourasiya.com)
-# Project Title
+# Portfolio - A personal blogging app
 
-One Paragraph of project description goes here
+This is a personal blogging app build in Django and hosted on Heroku.
+This app is currently deployed at ttps://www.amanchourasiya.com .
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+For running this app in your local development environment you will need a linux machine as the production server(gunicorn) is not available on windows. 
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+To get all dependencies required fot this project run this command.
 
 ```
-Give examples
+pip3 install -r requirements.txt
 ```
+
+Since this app uses S3 for storing static images and blog data some environment variables need to be supplied. Complete list of environment variables cane be found inside env-variables file in this reposotiry.
+
+AWS S3 bucket should be created with public access and ImageKit.io (Image CDN for image optimization) has been used in this app so ImageKit CDN should be preconfigured with AWS s3 bucket.
 
 ### Installing
 
@@ -75,7 +77,8 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Aman Chourasiya** - *Back-end and deployment* - [Aman Chourasiya](https://github.com/amanchourasiya)
+* **Anuj Chourasiya** - *Front-end and project setup* - [Aman Chourasiya](https://github.com/anuj-chourasiya)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
@@ -85,7 +88,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* EditorJS for blog Editor
+
 
