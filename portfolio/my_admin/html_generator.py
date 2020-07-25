@@ -37,6 +37,7 @@ def create_html(title, blocks, path='blog/templates/blog/'):
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js' async></script>
 <link rel="stylesheet" href="/static/css/owl.carousel.min.css">
 <link rel="stylesheet" href="/static/css/owl.theme.default.min.css">
 <link rel="stylesheet" href="/static/css/animate.css">
@@ -136,7 +137,7 @@ def create_html(title, blocks, path='blog/templates/blog/'):
             if flag == 0:
                 paragraph = '''
                     <div class="para-desc-blog">
-                    <p id="blog-description"><span class="blog-first-char">'''+block['data']['text'][0]+'''</span>'''+block['data']['text'][1:-1]+'''</p>
+                    <p id="blog-description"><span class="blog-first-char">'''+block['data']['text'][0]+'''</span>'''+block['data']['text'][1:]+'''</p>
                     </div>
                     
             '''
@@ -183,7 +184,7 @@ def create_html(title, blocks, path='blog/templates/blog/'):
         elif block['type'] == 'image':
             image = '''<div class="text-center">
                      <figure class="figure">
-                     <img src='''+block['data']['file']['url']+''' class="figure-img img-fluid img-thumbnail " style="width:100%;"> 
+                     <img data-src='''+block['data']['file']['url']+''' class="figure-img img-fluid img-thumbnail lazyload" style="width:100%;"> 
                      <figcaption class="figure-caption text-center">'''+block['data']['caption']+'''</figcaption>
                      </figure>
                      </div>
