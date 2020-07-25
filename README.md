@@ -78,7 +78,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## Authors
 
 * **Aman Chourasiya** - *Back-end and deployment* - [Aman Chourasiya](https://github.com/amanchourasiya)
-* **Anuj Chourasiya** - *Front-end and project setup* - [Aman Chourasiya](https://github.com/anuj-chourasiya)
+* **Anuj Chourasiya** - *Front-end and project setup* - [Anuj Chourasiya](https://github.com/anuj-chourasiya)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
