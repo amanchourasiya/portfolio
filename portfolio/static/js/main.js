@@ -20,6 +20,7 @@ $(document).ready(function () {
 		responsive: responsive,
 	});
 	checkBlogViews();
+	addLikeButtonListener();
 });
 
 function checkBlogViews() {
@@ -40,7 +41,8 @@ function getPageViews(blogName) {
 		console.log(pageViews);
 		console.log(pageClaps);
 		$('#page-views').html(pageViews);
-		// set page claps attribute
+		$('#page-likes').html(pageClaps);
+		
 	});
 };
 
@@ -50,4 +52,9 @@ function incrementPageViews(blogName) {
 
 function incrementClaps(blogName) {
 	$.post('/api/v1/incrementclaps', { 'blog_name': blogName });
+};
+
+function addLikeButtonListener() {
+        let btnlike = document.querySelector('#likebutton')
+        btnlike.addEventListener('click',() => btnlike.style.color='#1d2124')
 };
