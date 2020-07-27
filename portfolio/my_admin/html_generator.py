@@ -195,6 +195,59 @@ def create_html(title, blocks, path='blog/templates/blog/'):
         elif block['type'] == 'delimiter':
             hr = '''<hr style="height:2px;border-width:0;color:gray;background-color:gray">'''
             fileobj.write(hr)
+            
+    like_ann_sharing_icon=''' 
+                             <div class="post-socialIcons" style="">
+                         <ul class="list-unstyled">
+                           <li class="socialIcons-links socialIcons-links-like" style="display: inline-table;float: left;">
+                           <button  onclick="incrementClaps()" id="likebutton" class="fa fa-thumbs-up like-button" ></button>
+                           
+                           </li>
+                           
+                           
+                           <li id="page-likes"   style="float: left;margin-top: 4px;">100</li>
+                         
+                           <li class="socialIcons-links socialIcons-links-linkedin">
+                           <a id="linkedId" class="fa fa-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=" target="_blank"></a>
+                           <script>
+                                var reddit_share_api=document.getElementById('linkedId').href
+                                var current_location=window.location.href
+                                document.getElementById('linkedId').href=reddit_share_api+current_location
+                           </script>
+                           </li>
+                           <li class="socialIcons-links socialIcons-links-twitter">
+                           <a id="twiId" class="fa fa-twitter" href="https://twitter.com/share?url=" target="_blank"></a>
+                           <script>
+                                var reddit_share_api=document.getElementById('twiId').href
+                                var current_location=window.location.href
+                                document.getElementById('twiId').href=reddit_share_api+current_location
+                           </script>
+                           </li>
+                           <li class="socialIcons-links socialIcons-links-facebook">
+                           <a id="fbId" class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank"></a>
+                           <script>
+                                var reddit_share_api=document.getElementById('fbId').href
+                                var current_location=window.location.href
+                                document.getElementById('fbId').href=reddit_share_api+current_location
+                           </script>
+                           </li>
+                            <li class="socialIcons-links socialIcons-links-reddit">
+                           <a id="redId" class="fa fa-reddit-alien" href="https://reddit.com/submit?url=" target="_blank"></a>
+                           <script>
+                                var reddit_share_api=document.getElementById('redId').href
+                                var current_location=window.location.href
+                                document.getElementById('redId').href=reddit_share_api+current_location
+                           </script>
+                           </li>
+                           
+                          
+                          
+                          
+                         </ul>
+                      </div>
+                               
+                          '''
+    fileobj.write(like_ann_sharing_icon)
     fileobj.write("</div>")
 
     footer = '''
