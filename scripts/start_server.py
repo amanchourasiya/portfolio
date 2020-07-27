@@ -25,7 +25,7 @@ def usage():
 def dev_mode():
     # Check prerequisites
     check_prerequisites()
-
+    generate_blogs()
     # Start server
     start()
 

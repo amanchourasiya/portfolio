@@ -327,6 +327,20 @@ color: #fff;
     font-size: 15px;
     padding-top: 8px;
 }
+
+.post-socialIcons .socialIcons-links-like button{
+	background-color: #e15171;
+    color: #ffffff;
+    display: block;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+    padding-top: 4px;
+    border: none;
+	outline:none;
+	cursor:pointer;
+}
 .post-socialIcons .socialIcons-links-facebook a {
     background-color: #3b5998;
 }

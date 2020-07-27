@@ -14,48 +14,66 @@ const responsive = {
 }
 $(document).ready(function () {
 	$(".owl-carousel").owlCarousel({
-		loop:true,
-		autoplay:true,
-		autoplayTimeout:2500,
-		responsive:responsive,
-		});
-		checkBlogViews();	
-		//updateMetaTags();
+		loop: true,
+		autoplay: true,
+		autoplayTimeout: 2500,
+		responsive: responsive,
+	});
+	checkBlogViews();
+	addLikeButtonListener();
 });
 
-function checkBlogViews(){
-	let url = location.href.split("/").slice(-3);
-	if (url[0] == "blog"){
-		getPageViews(url[1]);
-		incrementPageViews(url[1]);
+function checkBlogViews() {
+	let blogName = getBlogName();
+	if (blogName != ''){
+		getPageViews(blogName);
+		incrementPageViews(blogName);
 	}
 };
 
-function getPageViews(blogName){   
-	let pageViews; 
-    $.get('/api/v1/getviews/'+ blogName , function(data, status){
+function getBlogName() {
+	let url = location.href.split("/").slice(-3);
+	if (url[0] == "blog") {
+		return url[1];
+	}
+	return '';
+};
+
+function getPageViews(blogName) {
+	let pageViews;
+	let pageClaps;
+	$.get('/api/v1/getviews/' + blogName, function (data, status) {
 		console.log(data);
 		pageViews = data["blog_views"];
+		pageClaps = data["blog_claps"];
 		console.log(pageViews);
+		console.log(pageClaps);
 		$('#page-views').html(pageViews);
+		$('#page-likes').html(pageClaps);
+		
 	});
-	// Change page views
-	//window.alert(pageViews);
-	
 };
 
-function incrementPageViews(blogName){
-	$.post('/api/v1/incrementviews', {'blog_name': blogName});
+function incrementPageViews(blogName) {
+	$.post('/api/v1/incrementviews', { 'blog_name': blogName });
 };
 
-function updateMetaTags(){
-	// Updating og tags
-	$('meta[property="og:title"]').attr('content' ,$('#blog-title').text());
-	$('meta[property="og:description"]').attr('content', $('#blog-description').text());
-	$('meta[property="og:url"]').attr('content', window.location.href);
+let pageAlreadyLiked = false;
+function incrementClaps() {
+	// Increment local count
+	if (pageAlreadyLiked == true){
+		return;
+	}
+	pageAlreadyLiked = true;
+	pageLikes = $('#page-likes').html();
+	$('#page-likes').html(parseInt(pageLikes, 10) + 1);
 
-	// updating twitter tags
-	$('meta[name="twitter:title"]').attr('content', $('#blog-title').text());
-	$('meta[name="twitter:description"]').attr('content' ,$('#blog-description').text());
-	$('meta[name="twitter:url"]').attr('content',window.location.href);
+	// Increment remote data
+	let blogName = getBlogName();
+	$.post('/api/v1/incrementclaps', { 'blog_name': blogName });
+};
+
+function addLikeButtonListener() {
+        let btnlike = document.querySelector('#likebutton')
+        btnlike.addEventListener('click',() => btnlike.style.color='#1d2124')
 };
