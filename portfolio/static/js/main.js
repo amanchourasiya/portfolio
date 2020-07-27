@@ -24,11 +24,19 @@ $(document).ready(function () {
 });
 
 function checkBlogViews() {
+	let blogName = getBlogName();
+	if (blogName != ''){
+		getPageViews(blogName);
+		incrementPageViews(blogName);
+	}
+};
+
+function getBlogName() {
 	let url = location.href.split("/").slice(-3);
 	if (url[0] == "blog") {
-		getPageViews(url[1]);
-		incrementPageViews(url[1]);
+		return url[1];
 	}
+	return '';
 };
 
 function getPageViews(blogName) {
@@ -50,7 +58,18 @@ function incrementPageViews(blogName) {
 	$.post('/api/v1/incrementviews', { 'blog_name': blogName });
 };
 
-function incrementClaps(blogName) {
+let pageAlreadyLiked = false;
+function incrementClaps() {
+	// Increment local count
+	if (pageAlreadyLiked == true){
+		return;
+	}
+	pageAlreadyLiked = true;
+	pageLikes = $('#page-likes').html();
+	$('#page-likes').html(parseInt(pageLikes, 10) + 1);
+
+	// Increment remote data
+	let blogName = getBlogName();
 	$.post('/api/v1/incrementclaps', { 'blog_name': blogName });
 };
 

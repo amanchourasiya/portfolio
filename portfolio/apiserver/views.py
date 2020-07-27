@@ -40,7 +40,7 @@ def get_views_and_claps(request, blog_name):
         post = PostViews.objects.get(blog_id=blog_name)
     except PostViews.DoesNotExist:
         # Blog entry not present so this is first view of post
-        post = PostViews(blog_id=blog_name, blog_view_count=0)
+        post = PostViews(blog_id=blog_name, blog_view_count=0, blog_claps=0)
         post.save()
     data = {
         'blog_views': post.blog_view_count,
@@ -63,12 +63,17 @@ def increment_views(request):
 
 @csrf_exempt
 def increment_claps(request):
-    if request.method == 'POST':
-        blog_name = request.POST.get('blog_name')
-        try:
-            post = PostViews.objects.get(blog_id=blog_name)
-            post.blog_claps = post.blog_claps + 1
-        except PostViews.DoesNotExist:
-            post = PostViews(blog_id=blog_name, blog_claps=1)
-        post.save()
+    try:
+        if request.method == 'POST':
+            blog_name = request.POST.get('blog_name')
+            try:
+                post = PostViews.objects.get(blog_id=blog_name)
+                post.blog_claps = post.blog_claps + 1
+            except PostViews.DoesNotExist as e:
+                print(e)
+                post = PostViews(blog_id=blog_name, blog_claps=1)
+            post.save()
+            return JsonResponse({}, safe=False)
+    except Exception as e:
+        print(e)
         return JsonResponse({}, safe=False)   
