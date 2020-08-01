@@ -73,9 +73,10 @@ def preview_blog(request):
 
 
 def process_title(title):
+    title = title.lower()
     for c in title:
         if not c.isalnum():
-            title = title.replace(c, '_')
+            title = title.replace(c, '-')
     return title
 
 
