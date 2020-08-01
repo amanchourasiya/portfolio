@@ -43,11 +43,11 @@ def create_html(title, blocks, path='blog/templates/blog/'):
 <link rel="stylesheet" href="/static/css/owl.theme.default.min.css">
 <link rel="stylesheet" href="/static/css/animate.css">
 <link rel="stylesheet" href="/static/css/style.css">
-<link rel="icon" href="/static/img/logo.png" type="image/icon">
+<link rel="icon" href="https://ik.imagekit.io/portfolio/logo_yJ88tl3MK.png" type="image/icon">
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="    background-color: #000000fc;">
-<a class="navbar-brand" href="/"><img class="img-fluid" src="/static/img/logo.png" alt="logo" width="60;" height="20;"></a>
+<a class="navbar-brand" href="/"><img class="img-fluid" src="https://ik.imagekit.io/portfolio/logo_yJ88tl3MK.png" alt="logo" width="60;" height="20;"></a>
 <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 <span class="navbar-toggler-icon"></span>
 </button>
@@ -156,7 +156,7 @@ def create_html(title, blocks, path='blog/templates/blog/'):
 
         elif block['type'] == 'embed':
             youtube = '''  <iframe height="345" src="''' + \
-                block['data']['embed']+'''" style="width:100%;"></iframe>'''
+                block['data']['embed']+'''" style="align:center;width:70%;"></iframe>'''
             fileobj.write(youtube)
 
         elif block['type'] == 'code':
