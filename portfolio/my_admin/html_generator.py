@@ -80,36 +80,20 @@ def create_html(title, blocks, path='blog/templates/blog/'):
                       <div class="post-socialIcons">
                          <ul>
                            <li class="socialIcons-links socialIcons-links-linkedin">
-                            <a id="linkedId" class="fa fa-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=" target="_blank"></a>
-                             <script>
-                                var reddit_share_api=document.getElementById('linkedId').href
-                                var current_location=window.location.href
-                                document.getElementById('linkedId').href=reddit_share_api+current_location
-                             </script>
+                            <a id="linkedinId" class="fa fa-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=" target="_blank"></a>
+                            
                            </li>
                            <li class="socialIcons-links socialIcons-links-twitter">
-                           <a id="twiId" class="fa fa-twitter" href="https://twitter.com/share?url=" target="_blank"></a>
-                           <script>
-                                var reddit_share_api=document.getElementById('twiId').href
-                                var current_location=window.location.href
-                                document.getElementById('twiId').href=reddit_share_api+current_location
-                           </script>
+                           <a id="twitterId" class="fa fa-twitter" href="https://twitter.com/share?url=" target="_blank"></a>
+                           
                            </li>
                            <li class="socialIcons-links socialIcons-links-facebook">
                            <a id="fbId" class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank"></a>
-                           <script>
-                                var reddit_share_api=document.getElementById('fbId').href
-                                var current_location=window.location.href
-                                document.getElementById('fbId').href=reddit_share_api+current_location
-                           </script>
+                           
                            </li>
                             <li class="socialIcons-links socialIcons-links-reddit">
-                           <a id="redId" class="fa fa-reddit-alien" href="https://reddit.com/submit?url=" target="_blank"></a>
-                           <script>
-                                var reddit_share_api=document.getElementById('redId').href
-                                var current_location=window.location.href
-                                document.getElementById('redId').href=reddit_share_api+current_location
-                           </script>
+                           <a id="redditId" class="fa fa-reddit-alien" href="https://reddit.com/submit?url=" target="_blank"></a>
+                           
                            </li>
                            <li id="page-views" class="fa fa-eye " style="float: right;margin-top: 10px;">0</li>
                           
@@ -208,36 +192,19 @@ def create_html(title, blocks, path='blog/templates/blog/'):
                            <li id="page-likes"   style="float: left;margin-top: 4px;">100</li>
                          
                            <li class="socialIcons-links socialIcons-links-linkedin">
-                           <a id="linkedId" class="fa fa-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=" target="_blank"></a>
-                           <script>
-                                var reddit_share_api=document.getElementById('linkedId').href
-                                var current_location=window.location.href
-                                document.getElementById('linkedId').href=reddit_share_api+current_location
-                           </script>
+                           <a id="linkedinId" class="fa fa-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=" target="_blank"></a>
                            </li>
                            <li class="socialIcons-links socialIcons-links-twitter">
-                           <a id="twiId" class="fa fa-twitter" href="https://twitter.com/share?url=" target="_blank"></a>
-                           <script>
-                                var reddit_share_api=document.getElementById('twiId').href
-                                var current_location=window.location.href
-                                document.getElementById('twiId').href=reddit_share_api+current_location
-                           </script>
+                           <a id="twitterId" class="fa fa-twitter" href="https://twitter.com/share?url=" target="_blank"></a>
+                           
                            </li>
                            <li class="socialIcons-links socialIcons-links-facebook">
                            <a id="fbId" class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank"></a>
-                           <script>
-                                var reddit_share_api=document.getElementById('fbId').href
-                                var current_location=window.location.href
-                                document.getElementById('fbId').href=reddit_share_api+current_location
-                           </script>
+                           
                            </li>
                             <li class="socialIcons-links socialIcons-links-reddit">
-                           <a id="redId" class="fa fa-reddit-alien" href="https://reddit.com/submit?url=" target="_blank"></a>
-                           <script>
-                                var reddit_share_api=document.getElementById('redId').href
-                                var current_location=window.location.href
-                                document.getElementById('redId').href=reddit_share_api+current_location
-                           </script>
+                           <a id="redditId" class="fa fa-reddit-alien" href="https://reddit.com/submit?url=" target="_blank"></a>
+                           
                            </li>
                            
                           
@@ -293,7 +260,7 @@ def create_html(title, blocks, path='blog/templates/blog/'):
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="/static/js/owl.carousel.min.js"></script>
-<script src="/static/js/main.js"></script>
+<script src="/static/js/blog.js"</script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </html>
 
