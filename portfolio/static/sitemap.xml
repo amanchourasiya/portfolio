@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.amanchourasiya.com/</loc>
+  <lastmod>2020-08-02T08:12:15+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.amanchourasiya.com/blog/</loc>
+  <lastmod>2020-08-02T08:12:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.amanchourasiya.com/port/</loc>
+  <lastmod>2020-08-02T08:12:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.amanchourasiya.com/blog/deploying-django-app-on-heroku-from-github-repository/</loc>
+  <lastmod>2020-08-02T08:12:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.amanchourasiya.com/blog/optimizing-images-with-imagekit-cdn/</loc>
+  <lastmod>2020-08-02T08:12:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.amanchourasiya.com/blog/creating-twitter-bot-using-tweepy/</loc>
+  <lastmod>2020-08-02T08:12:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.amanchourasiya.com/blog/how-to-use-nmap-a-beginner-friendly-guide/</loc>
+  <lastmod>2020-08-02T08:12:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.amanchourasiya.com/blog/what-happens-when-we-type-google-com/</loc>
+  <lastmod>2020-08-02T08:12:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.amanchourasiya.com/blog/ethical-hacking-a-big-picture/</loc>
+  <lastmod>2020-08-02T08:12:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
