@@ -10,3 +10,5 @@ def index(request):
         return render(request, 'index.html', {'data': data})
     else:
         return render(request, 'index.html', {'data': {}})
+def sitemap(request):
+    return HttpResponse(open('static/sitemap.xml').read(), content_type='text/xml')
