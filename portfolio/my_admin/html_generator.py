@@ -76,6 +76,10 @@ def create_html(title, blocks, path='blog/templates/blog/'):
             if header_flag == 0:
 
                 header = '''
+                <div id="overlay" class="overlay" style="text-align: center;"
+             onclick="document.getElementById('overlay').style.display = 'none';" >
+            <img style="width:90%;margin-top: 50px; border:3px solid black;" src="'''+blocks[1]['data']['file']['url']+'''">
+              </div>
                       <h1 id="blog-title" class="text-center head-blog" style="margin-top:70px;">'''+block['data']['text']+'''</h1>
                       <div class="post-socialIcons">
                          <ul>
@@ -169,7 +173,7 @@ def create_html(title, blocks, path='blog/templates/blog/'):
         elif block['type'] == 'image':
             image = '''<div class="text-center">
                      <figure class="figure">
-                     <img data-src='''+block['data']['file']['url']+''' class="figure-img img-fluid img-thumbnail lazyload" style="width:100%;"> 
+                     <img data-src='''+block['data']['file']['url']+''' class="figure-img img-fluid img-thumbnail lazyload" style="width:100%;"onclick="document.getElementById('overlay').style.display = 'block';"> 
                      <figcaption class="figure-caption text-center">'''+block['data']['caption']+'''</figcaption>
                      </figure>
                      </div>
