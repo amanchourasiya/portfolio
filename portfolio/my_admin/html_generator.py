@@ -17,6 +17,7 @@ def create_html(title, blocks, path='blog/templates/blog/'):
 <meta name="google-site-verification" content="UWZvQZ1V61UOV7vRiEO4B6fw5zSG564goDnTUq5j450" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>'''+blocks[0]['data']['text']+'''</title>
+<meta name="description" content="'''+blocks[2]['data']['text']+'''" />
 <meta property="og:site_name" content="Aman Chourasiya" />
 <meta property="og:title" content="'''+blocks[0]['data']['text']+'''" />
 <meta property="og:type" content="article" />
