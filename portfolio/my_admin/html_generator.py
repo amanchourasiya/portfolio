@@ -38,7 +38,7 @@ def create_html(title, blocks, path='blog/templates/blog/'):
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 <script src='https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js' async></script>
-
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <link rel="stylesheet" href="/static/css/owl.carousel.min.css">
 <link rel="stylesheet" href="/static/css/owl.theme.default.min.css">
 <link rel="stylesheet" href="/static/css/animate.css">
@@ -258,7 +258,7 @@ def create_html(title, blocks, path='blog/templates/blog/'):
 </div>
 
 </footer>
-<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="/static/js/owl.carousel.min.js"></script>
 <script src="/static/js/blog.js"</script>
