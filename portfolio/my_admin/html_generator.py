@@ -48,7 +48,7 @@ def create_html(title, blocks, path='blog/templates/blog/'):
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="    background-color: #000000fc;">
 <a class="navbar-brand" href="/"><img class="img-fluid" src="https://ik.imagekit.io/portfolio/logo_yJ88tl3MK.png" alt="logo" width="60;" height="20;"></a>
-<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+<button class="navbar-toggler " style="outline:none;" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 <span class="navbar-toggler-icon"></span>
 </button>
 <div class="collapse navbar-collapse" id="collapsibleNavbar">
