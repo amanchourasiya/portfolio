@@ -44,7 +44,7 @@ def create_html(title, blocks, path='blog/templates/blog/'):
 <link rel="stylesheet" href="/static/css/owl.theme.default.min.css">
 <link rel="stylesheet" href="/static/css/animate.css">
 <link rel="stylesheet" href="/static/css/style.css">
-<link rel="icon" href="https://ik.imagekit.io/portfolio/logo_yJ88tl3MK.png" type="image/icon">
+<link rel="icon" href="https://ik.imagekit.io/portfolio/favicon_Ub2SkdbzC.ico" type="image/icon">
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="    background-color: #000000fc;">
