@@ -255,8 +255,8 @@ def create_html(title, blocks, path='blog/templates/blog/'):
 
 
 <p class="text-center " style="color:white">Contact me for any queries</p>
-<div class="footer-copyright text-center pt-1" style="color:white">2020 Copyright:
-<a href="https://mdbootstrap.com/"> Chourasiya Brothers</a>
+<div class="footer-copyright text-center pt-1" style="color:white">
+
 </div>
 
 </footer>
