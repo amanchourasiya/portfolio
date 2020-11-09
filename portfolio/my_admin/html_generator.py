@@ -82,19 +82,19 @@ def create_html(title, blocks, path='blog/templates/blog/'):
                       <div class="post-socialIcons">
                          <ul>
                            <li class="socialIcons-links socialIcons-links-linkedin">
-                            <a id="linkedinId" class="fa fa-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=" target="_blank"></a>
+                            <a id="linkedinId" class="fab fa-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=" target="_blank"></a>
                             
                            </li>
                            <li class="socialIcons-links socialIcons-links-twitter">
-                           <a id="twitterId" class="fa fa-twitter" href="https://twitter.com/share?url=" target="_blank"></a>
+                           <a id="twitterId" class="fab fa-twitter" href="https://twitter.com/share?url=" target="_blank"></a>
                            
                            </li>
                            <li class="socialIcons-links socialIcons-links-facebook">
-                           <a id="fbId" class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank"></a>
+                           <a id="fbId" class="fab fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank"></a>
                            
                            </li>
                             <li class="socialIcons-links socialIcons-links-reddit">
-                           <a id="redditId" class="fa fa-reddit-alien" href="https://reddit.com/submit?url=" target="_blank"></a>
+                           <a id="redditId" class="fab fa-reddit-alien" href="https://reddit.com/submit?url=" target="_blank"></a>
                            
                            </li>
                            <li id="page-views" class="fa fa-eye " style="float: right;margin-top: 10px;">0</li>
@@ -194,18 +194,18 @@ def create_html(title, blocks, path='blog/templates/blog/'):
                            <li id="page-likes"   style="float: left;margin-top: 4px;">100</li>
                          
                            <li class="socialIcons-links socialIcons-links-linkedin">
-                           <a id="linkedinId" class="fa fa-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=" target="_blank"></a>
+                           <a id="linkedinId" class="fab fa-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=" target="_blank"></a>
                            </li>
                            <li class="socialIcons-links socialIcons-links-twitter">
-                           <a id="twitterId" class="fa fa-twitter" href="https://twitter.com/share?url=" target="_blank"></a>
+                           <a id="twitterId" class="fab fa-twitter" href="https://twitter.com/share?url=" target="_blank"></a>
                            
                            </li>
                            <li class="socialIcons-links socialIcons-links-facebook">
-                           <a id="fbId" class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank"></a>
+                           <a id="fbId" class="fab fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank"></a>
                            
                            </li>
                             <li class="socialIcons-links socialIcons-links-reddit">
-                           <a id="redditId" class="fa fa-reddit-alien" href="https://reddit.com/submit?url=" target="_blank"></a>
+                           <a id="redditId" class="fab fa-reddit-alien" href="https://reddit.com/submit?url=" target="_blank"></a>
                            
                            </li>
                            
