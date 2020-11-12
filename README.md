@@ -61,11 +61,15 @@ Give an example
 
 Add additional notes about how to deploy this on a live system
 
-## Built With
+## Built With Technologies
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [BootStrap](https://getbootstrap.com/) -Responsive, mobile-first front-end web development framework. 
+* [jQuery](https://jquery.com/) -  Fast, small, and feature-rich JavaScript library
+
+* [Django](https://www.djangoproject.com/) - Python-based free and open-source web framework
+* [AWS S3](https://aws.amazon.com/s3/) - Cloud storage service
+* [Boto 3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) - Amazon Web Services (AWS) SDK for Python
+* [PostgreSQL](https://www.postgresql.org/) - Advanced, enterprise-class, and open-source relational database system.
 
 ## Contributing
 
@@ -77,8 +81,8 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Aman Chourasiya** - *Back-end and deployment* - [Aman Chourasiya](https://github.com/amanchourasiya)
-* **Anuj Chourasiya** - *Front-end and project setup* - [Anuj Chourasiya](https://github.com/anuj-chourasiya)
+* **Aman Chourasiya** - *Project setup ,backend,and deployment* - [Aman Chourasiya](https://github.com/amanchourasiya)
+* **Anuj Chourasiya** - *Front-end and backend* - [Anuj Chourasiya](https://github.com/anuj-chourasiya)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
