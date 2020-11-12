@@ -1,7 +1,7 @@
 # Portfolio - A personal blogging app
 
 This is a personal blogging app build in Django and hosted on Heroku.
-This app is currently deployed at ttps://www.amanchourasiya.com .
+This app is currently deployed at https://www.amanchourasiya.com .
 
 ## Getting Started
 
