@@ -60,7 +60,7 @@ function addLikeButtonListener() {
 };
 
 function updateSocialUrl(){
-    let socialShare = [".fa-linkedin", ".fa-twitter", ".fa-facbook", ".fa-reddit-alien"]
+    let socialShare = [".fa-linkedin", ".fa-twitter", ".fa-facebook", ".fa-reddit-alien"]
     socialShare.forEach(function(item){
         $(item).attr('href',$(item).attr('href') + window.location.href);
     });
